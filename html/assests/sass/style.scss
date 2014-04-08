@@ -1,0 +1,448 @@
+/*!
+Theme Name: ClickIn BLog 
+Theme URI: www.clickinapp.in/blog
+Author: Sourcefuse Technologies Pvt. Ltd.
+Author URI: http://www.sourcefuse.com/
+Description: Theme designed specifically for this ClickinApp Blog
+*/
+
+@import "reset";
+@import "fonts";
+
+$primaryFont: "AvenirNextL TPro MediumCn", Verdana, sans-serif; 
+
+@mixin css-transition ($type, $speed, $ease) {
+	-webkit-transition: $type $speed $ease;
+	-moz-transition: $type $speed $ease;
+	transition:  $type $speed $ease;
+}
+
+.home-list a,
+.blog-articles .home-list .article-content .article-meta .social-share li a {
+	@include css-transition(all, .3s, ease);
+}
+
+
+/* =General Styles
+----------------------------------------------- */
+html, body {
+	min-height:100%;
+}
+.clearfix:after {
+	visibility: hidden;
+	display: block;
+	font-size: 0;
+	content: " ";
+	clear: both;
+	height: 0;
+}
+.clearfix { display: inline-block; }
+/* start commented backslash hack \*/
+* html .clearfix { height: 1%; }
+.clearfix { display: block; }
+strong {
+	font-weight:bold;
+}
+.alignright {
+	float:right;
+	padding: 10px 0 10px 10px;
+}
+.alignleft {
+	float:left;
+	padding: 10px 10px 10px 0;
+}
+.alignCenter {
+	text-align:center;
+}
+a {
+	text-decoration:none;
+}
+
+body {
+	font-family:$primaryFont;
+	font-style:normal;
+	font-weight:normal;
+}
+
+
+/* =Header
+----------------------------------------------- */
+.site-header {
+	max-width:100%;
+	width:1024px;
+	margin:0 auto;
+	background: #364566;
+	background: -moz-linear-gradient(top, #364566 0%, #364566 55%, #232d45 97%, #222d43 100%);
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#364566), color-stop(55%,#364566), color-stop(97%,#232d45), color-stop(100%,#222d43));
+	background: -webkit-linear-gradient(top, #364566 0%,#364566 55%,#232d45 97%,#222d43 100%);
+	background: -o-linear-gradient(top, #364566 0%,#364566 55%,#232d45 97%,#222d43 100%);
+	background: -ms-linear-gradient(top, #364566 0%,#364566 55%,#232d45 97%,#222d43 100%);
+	background: linear-gradient(to bottom, #364566 0%,#364566 55%,#232d45 97%,#222d43 100%);
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#364566', endColorstr='#222d43',GradientType=0 );
+	border-bottom-left-radius: 20px;
+	border-bottom-right-radius: 20px;
+	height: 58px;
+	position: relative;
+	.site-logo {
+		position:absolute;
+		left:50%;
+		margin-left:-117px;
+		top:00px;
+	}
+	.social-links {
+		float:right;
+		margin-right:20px;
+		li{
+			margin:13px 1px 0 1px;
+			float:left;
+			a {
+				width:27px;
+				height:27px;
+				display:block;
+				&.pinterest {
+					background:url(images/p-interest.png) no-repeat;
+					&:hover {
+						background:url(images/p-interest-hover.png) no-repeat;
+					}
+				}
+				&.twitter {
+					background:url(images/twitter.png) no-repeat;
+					&:hover {
+						background:url(images/twitter-hover.png) no-repeat;
+					}
+				}
+				&.facebook {
+					background:url(images/facebook.png) no-repeat;
+					&:hover {
+						background:url(images/facebook-hover.png) no-repeat;
+					}
+				}
+			}
+		}
+	}
+}
+
+.main-menu {
+	margin-left:20px;
+	float:left;
+	ul {
+		li {
+			min-width:117px;
+			text-align:center;
+			margin-right:13px;
+			margin-top:13px;
+			float:left;
+			a {
+				background: #707fa1;
+				background: -moz-linear-gradient(top, #707fa1 0%, #42547a 100%);
+				background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#707fa1), color-stop(100%,#42547a));
+				background: -webkit-linear-gradient(top, #707fa1 0%,#42547a 100%);
+				background: -o-linear-gradient(top, #707fa1 0%,#42547a 100%);
+				background: -ms-linear-gradient(top, #707fa1 0%,#42547a 100%);
+				background: linear-gradient(to bottom, #707fa1 0%,#42547a 100%);
+				filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#707fa1', endColorstr='#42547a',GradientType=0 );
+				display:block;
+				border-radius: 5px;
+				color: #fff;
+				padding: 8px 10px;
+				text-transform:uppercase;
+				text-decoration:none;
+				font-size:14px;
+				font-weight:bold;
+				&:hover {
+					color: #ee8c84;
+					background: #fbfbfb;
+					background: -moz-linear-gradient(top, #fbfbfb 0%, #fbfbfb 46%, #f0f0f0 87%, #eaeaea 100%);
+					background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#fbfbfb), color-stop(46%,#fbfbfb), color-stop(87%,#f0f0f0), color-stop(100%,#eaeaea));
+					background: -webkit-linear-gradient(top, #fbfbfb 0%,#fbfbfb 46%,#f0f0f0 87%,#eaeaea 100%);
+					background: -o-linear-gradient(top, #fbfbfb 0%,#fbfbfb 46%,#f0f0f0 87%,#eaeaea 100%);
+					background: -ms-linear-gradient(top, #fbfbfb 0%,#fbfbfb 46%,#f0f0f0 87%,#eaeaea 100%);
+					background: linear-gradient(to bottom, #fbfbfb 0%,#fbfbfb 46%,#f0f0f0 87%,#eaeaea 100%);
+					filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#fbfbfb', endColorstr='#eaeaea',GradientType=0 );
+				}
+			}
+		}
+	}
+}
+
+/* =Page layout
+----------------------------------------------- */
+.page-wrapper {
+	width:1024px;
+	padding:0 19px;
+	max-width:100%;
+	margin:75px auto 0;
+	.blog-title {
+		text-align:center;
+		h1 {
+			color:#1f293f;
+			font-size:48px;
+			display:inline-block;
+			border-bottom:7px solid #7f7f7f;
+			text-transform:uppercase;
+		}
+	}
+}
+.home {
+	.page-wrapper {
+		width:1000px;
+		padding:0;
+	}
+}
+
+
+
+/* =Home Page Listings
+----------------------------------------------- */
+.blog-articles {
+	background:url(images/timeline-bg.jpg) repeat-y center top;
+	padding:22px 0;
+}
+.home-list {
+	float:left;
+	width:42.4%;
+	margin:0 3.8% 55px;
+	&:nth-child(2) {
+		margin-top:69px;
+	}
+	.article-wrap {
+		border:1px solid #f29691;
+	}
+	.article-header {
+		position:relative;
+		background:#f29691;
+		line-height:47px;
+		h3 {
+			padding-left:22px;
+			font-size:24px;
+			color:#fff;
+			font-weight:bold;
+		}
+		.comments-count {
+			position:absolute;
+			right:22px;
+			top:0;
+			line-height:47px;
+			font-size:13px;
+			a {
+				color:#fff;
+			}
+		}
+		.timeline-arrow {
+			background:url(images/arrow-left-pink.png) no-repeat;
+			background-size:18px;
+			width:18px;
+			height:18px;
+			position:absolute;
+			right:auto;
+			left:-18px;
+			top:14px;
+		}
+		.timeline-circle {
+			background:url(images/timeline-circle.png) no-repeat;
+			background-size:27px;
+			width:27px;
+			height:27px;
+			position:absolute;
+			left: -12.25%;
+			right:auto;
+			top:8px;
+		}
+	}
+	&.arrow-right {
+		.article-header {
+			.timeline-arrow {
+				background:url(images/arrow-right-pink.png) no-repeat;
+				background-size:18px;
+				right:-18px;
+				left:auto;
+			}
+			.timeline-circle {
+				right:-12.25%;
+				left:auto;
+			}
+		}
+	}
+	.article-content{
+		padding:15px 22px 18px;
+		.article-media {
+			margin-bottom:24px;
+			* {
+				max-width:100%;
+				height:auto;
+			}
+		}
+		h2 {
+			margin-bottom:18px;
+			font-size:24px;
+			line-height:30px;
+			a {
+				color:#f29691;
+			}
+		}
+		p {
+			font-size:20px;
+			line-height:25px;
+			color:#424646;
+		}
+		.read-more {
+			color:#f29691;
+		}
+		.article-meta {
+			border-top:1px solid #f29691;
+			margin:20px 0 0;
+			padding-top:15px;
+			.published-date {
+				background:url(images/calendar.png) no-repeat left top;
+				background-size:30px;
+				font-size:25px;
+				color:#797f8c;
+				padding-left:36px;
+				line-height:30px;
+				float:left;
+			}
+			.social-share {
+				float:right;
+				li {
+					float:left;
+					margin-left:3px;
+					a {
+						width:31px;
+						height:30px;
+						display:block;
+						background:url(images/social-share.png) no-repeat;
+						background-size:94px;
+						&.pinterest {
+							background-position:-63px 0;
+							&:hover {
+								background-position:-63px -30px;
+							}
+						}
+						&.facebook {
+							background-position:0px 0;
+							&:hover {
+								background-position:0px -30px;
+							}
+						}
+						&.twitter {
+							background-position:-32px 0;
+							&:hover {
+								background-position:-32px -30px;
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+	a:hover {
+		color:#424646 !important;
+	}
+
+}
+.home-list:nth-child(even) {
+	.article-wrap {
+		border:1px solid #41e4f0;
+	}
+	.article-header {
+		background:#41e4f0;
+		.timeline-arrow {
+			background:url(images/arrow-left-blue.png) no-repeat;
+			background-size:18px;
+		}
+	}
+	&.arrow-right {
+		.article-header {
+			.timeline-arrow {
+				background:url(images/arrow-right-blue.png) no-repeat;
+				background-size:18px;
+			}
+		}
+	}
+	.article-content{
+		h2 a {
+			color:#41e4f0;
+		}
+		.article-meta {
+			border-top:1px solid #41e4f0;
+		}
+		.read-more {
+			color:#41e4f0;
+		}
+	}
+}
+
+
+/* =Single Post
+----------------------------------------------- */
+.single-article {
+	.single-post-header {
+		.category-title {
+			font-size:48px;
+			color:#1f293f;
+			font-weight:bold;
+			display:inline-block;
+		}
+		p {
+			font-size:20px;
+			color:#7f7f7f;
+			margin-left:5px;
+			display:inline-block;
+		}
+		h1 {
+			color:#41e4f0;
+			font-size:36px;
+			margin:24px 0;
+		}
+	}
+	.single-post-media {
+		margin:24px 0;
+		* {
+			max-width:100%;
+			height:auto;
+		}
+	}
+	.single-post-desc {
+		p {
+			margin:24px 0;
+			font-size:24px;
+			line-height:30px;
+			color:#7f7f7f;		
+		}
+	}
+}
+
+
+
+/* =Footer
+----------------------------------------------- */
+.site-footer {
+	background: #19233c;
+	text-align:center;
+	line-height:44px;
+	background: -moz-linear-gradient(top, #19233c 0%, #364566 19%, #364566 100%);
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#19233c), color-stop(19%,#364566), color-stop(100%,#364566));
+	background: -webkit-linear-gradient(top, #19233c 0%,#364566 19%,#364566 100%);
+	background: -o-linear-gradient(top, #19233c 0%,#364566 19%,#364566 100%);
+	background: -ms-linear-gradient(top, #19233c 0%,#364566 19%,#364566 100%);
+	background: linear-gradient(to bottom, #19233c 0%,#364566 19%,#364566 100%);
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#19233c', endColorstr='#364566',GradientType=0 );
+	a {
+		color: #74819d;
+		font-size: 20px;
+	}
+}
+
+/* =Media Queries
+----------------------------------------------- */
+@media only screen and (min-width: 750px) and (max-width: 900px) {
+	.home-list .article-content .article-meta .published-date {
+		font-size:19px;
+	}
+}
+
+@media only screen and (min-width: 640px) and (max-width: 749px) {
+	.home-list .article-content .article-meta .published-date {
+		font-size:13px;
+	}
+}
