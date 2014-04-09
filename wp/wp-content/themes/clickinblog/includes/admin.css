@@ -1,0 +1,233 @@
+/* =Basic styles 
+----------------------------------------------- */
+.clearfix:after {
+     visibility: hidden;
+     display: block;
+     font-size: 0;
+     content: " ";
+     clear: both;
+     height: 0;
+     }
+.clearfix { 
+	display: inline-block; 
+}
+/* start commented backslash hack \*/
+* html .clearfix { height: 1%; }
+.clearfix { 
+	display: block;
+	*zoom: 1; 
+}
+
+
+
+.rm_wrap {
+	width: 840px;
+}
+.rm_section {
+	border: 1px solid #ddd;
+	border-bottom: 0;
+	background: #f9f9f9;
+}
+.rm_opts label {
+	font-size: 12px;
+	font-weight: 700;
+	width: 200px;
+	display: block;
+	float: left;
+}
+h4.block_heading {
+	font-size: 16px;
+	padding: 0 18px;
+}
+.rm_input {
+	padding: 15px 30px;
+}
+.rm_opts small {
+	display: block;
+	float: right;
+	width: 200px;
+	color: #999;
+}
+.rm_opts input[type="text"], .rm_opts select {
+	width: 280px;
+	font-size: 12px;
+	padding: 4px;
+	color: #333;
+	line-height: 1em;
+	background: #f3f3f3;
+}
+.rm_input input:focus, .rm_input textarea:focus {
+	background: #fff;
+}
+.rm_input textarea {
+	width: 280px;
+	height: 175px;
+	font-size: 12px;
+	padding: 4px;
+	color: #333;
+	line-height: 1.5em;
+	background: #f3f3f3;
+}
+.rm_title h3 {
+	cursor: pointer;
+	font-size: 15px;
+	margin: 0;
+	font-weight: normal;
+	color: #fff;
+	float: left;
+	width: 80%;
+	padding: 14px;
+	line-height: 31px;
+}
+.rm_title {
+	cursor: pointer;
+	border-bottom: 1px solid #ddd;
+	background: #222;
+	padding: 0;
+}
+.rm_title:hover {
+	background: #000;
+}
+.rm_title:hover h3, .rm_title h3.active {
+	color:#2ea2cc;
+}
+
+
+.rm_title h3 img.inactive {
+	margin: -1px 15px 0 0;
+	width: 32px;
+	height: 32px;
+	background: url('../images/pointer.png') no-repeat 0 0;
+	float: left;
+}
+.rm_title h3 img.active {
+	margin: -1px 15px 0 0;
+	width: 32px;
+	height: 32px;
+	background: url('../images/pointer.png') no-repeat 0 -32px;
+	float: left;
+}
+.rm_title h3 img {
+}
+.rm_title span.submit {
+	display: block;
+	float: right;
+	margin: 0;
+	padding: 0;
+	width: 15%;
+	padding: 14px 0;
+}
+.clearfix {
+	clear: both;
+}
+.rm_table th, .rm_table td {
+	border: 1px solid #bbb;
+	padding: 10px;
+	text-align: center;
+}
+.rm_table th, .rm_table td.feature {
+	border-color: #888;
+}
+.block_sap {
+	border-bottom: 1px solid #ddd;
+	border-top: 1px solid #fff;
+}
+.upload.rm_input.rm_text img {
+	padding-left: 200px;
+	margin-top: 12px;
+}
+
+
+/* =featuredBox
+----------------------------------------------- */
+.featuredBox {
+	padding:20px 0 30px;
+}
+.featuredBoxlabel {
+	float:left;
+	width:7%;
+	padding:25px 2% 0 4%;
+}
+.featuredBoxlabel label {
+	width:auto;
+	float:none;
+}
+.featuredBox .featuredBoxImage {
+	float:left;
+	width:40%;
+	height:184px;
+	margin-left:10px;
+}
+.featuredBox .featuredBoxImage img {
+	max-width:100%;
+	height:auto;
+}
+.featuredBox .fBoxUploadOptions {
+	float:left;
+	width:42%;
+}
+.featuredUplaodBtn .text-upload {
+	width:60%;
+	float:left;
+}
+.featuredUplaodBtn .text-upload {
+	width: 50% !important;
+	margin-right: 10px;
+}
+.fbTextDesc {
+	font-size:10px;
+	margin:3px 0 14px;
+}
+.serviceIcons .featuredBoxlabel {
+	padding-top:73px;
+}
+.serviceIcons.featuredBox .featuredBoxImage {
+	padding: 7% 5%;
+	width: 30%;
+	height:64px;
+}
+.featuredBox.serviceIcons {
+	padding: 30px 0 20px;
+	border-bottom: 1px solid #eee;
+}
+.serviceIcons.featuredBox .featuredBoxImage span {
+	color: #0071BC;
+	line-height: 23px;
+	display: inline-block;
+	vertical-align: top;
+	padding-left: 10px;
+	font-size: 18px;
+	width: 91px;
+	text-align: right;
+}
+.featuredBox.insidePageheader .featuredBoxImage {
+	width: auto;
+	height: auto;
+	margin-bottom: 15px;
+	float:none;
+}
+.featuredBox.insidePageheader .fBoxUploadOptions {
+	width: auto;
+	float: none;
+}
+.featuredBox.insidePageheader .featuredUplaodBtn input {
+	display:inline-block;
+	float: none;
+}
+.featuredBox.insidePageheader .featuredUplaodBtn {
+	text-align:center;
+}
+
+.slideIconImage img {
+	margin-right:10px;
+}
+.slideIconImage input,
+.slideIconImage a {
+	margin-top:20px !important;
+}
+.slideIconImage img, 
+.slideIconImage input,
+.slideIconImage a {
+	display:inline-block !important; 
+	vertical-align:top !important;
+}
