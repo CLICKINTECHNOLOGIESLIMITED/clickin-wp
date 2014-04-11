@@ -1919,6 +1919,7 @@ a.post-thumbnail:hover {
 
 .comment-respond {
 	margin-bottom: 24px;
+	max-width:631px;
 	padding: 0;
 }
 

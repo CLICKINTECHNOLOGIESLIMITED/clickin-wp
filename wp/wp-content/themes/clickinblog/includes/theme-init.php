@@ -9,10 +9,9 @@
 function theme_setup() {
 	add_editor_style();
 	register_nav_menu( 'primary', 'Primary Menu' );
-	register_nav_menu( 'footer', 'Footer Menu' );
 
 	add_theme_support( 'post-thumbnails' );
-	set_post_thumbnail_size( 9999, 9999 ); // Unlimited height, soft crop
+	set_post_thumbnail_size( 986, 9999 ); // Unlimited height, soft crop
 	add_theme_support( 'automatic-feed-links' );	
 }
 add_action( 'after_setup_theme', 'theme_setup' );

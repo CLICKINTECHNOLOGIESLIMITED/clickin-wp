@@ -1,82 +1,54 @@
 <?php
 
 $themename = "Theme";
-$shortname = "bvTheme";
+$shortname = "clickIn";
 
 $options = array (
 
 	array( "name" => $themename." Options",
 		"type" => "title"),
 
-	array( "name" => "Header Settings",
+	array( "name" => "General Settings",
 		"type" => "section"),
 
 	array( "type" => "open"),
 	
-	array( "name" => "Address",
-		"desc" => "Type Address here..",
-		"id" => $shortname."_address",
+	array( "name" => "Number of post to show on load page (Default is 4)",
+		"desc" => "Enter a number",
+		"id" => $shortname."_no_of_posts",
 		"type" => "text",
 		"std" => ""),
 	
-	array( "name" => "Email",
-		"desc" => "Ex: bcda@blairsville-pa.com",
-		"id" => $shortname."_email",
-		"type" => "text",
-		"std" => ""),
-	
-	array( "name" => "Phone Number",
-		"desc" => "(800) 123-4567",
-		"id" => $shortname."_phoneNum",
+	array( "name" => "Pinterest Page Url",
+		"desc" => "http://www.pinterest.com/username",
+		"id" => $shortname."_pintUrl",
 		"type" => "text",
 		"std" => ""),
 
-	array( "name" => "Fax Number",
-		"desc" => "(800) 123-4567",
-		"id" => $shortname."_faxNum",
+	array( "name" => "Facebook Page Url",
+		"desc" => "http://www.facebook.com/pageName",
+		"id" => $shortname."_fbUrl",
 		"type" => "text",
 		"std" => ""),
+
+	array( "name" => "Twitter Page Url",
+		"desc" => "http://www.twitter.com/profile",
+		"id" => $shortname."_twUrl",
+		"type" => "text",
+		"std" => ""),
+
+	array( "name" => "Footer contact Email",
+		"desc" => "Ex: CONTACT@CLICKINAPP.COM",
+		"id" => $shortname."_footerEmail",
+		"type" => "text",
+		"std" => ""),
+	
 
 	array("type" => "block_sap"),
-
-	array( 
-		"type" => "block_heading",
-		"name" => "Header Logo"
-		),
-
-	array( "name" => "Header Logo",
-		"desc" => "Enter Some Text here",
-		"id" => $shortname."_siteLogo",
-		"type" => "footer_icon",
-		"std" => ""),
 
 
 	array( "type" => "close"),
 	
-	array( "name" => "Footer",
-		"type" => "section"),
-
-	array( "type" => "open"),
-
-	array( "name" => "Footer Logo",
-		"desc" => "Enter Some Text here",
-		"id" => $shortname."_footerLogo",
-		"type" => "footer_icon",
-		"std" => ""),
-		
-	array( "name" => "Tag line (under the logo)",
-		"desc" => "Enter some text here",
-		"id" => $shortname."_footerTagLine",
-		"type" => "text",
-		"std" => ""),
-	
-	array( "name" => "Facebook Code",
-		"desc" => "Enter Facebook Embed code",
-		"id" => $shortname."_footerFBcode",
-		"type" => "textarea",
-		"std" => ""),
-					
-	array( "type" => "close")
 );
 
 
@@ -110,7 +82,6 @@ function mytheme_add_admin() {
 function mytheme_add_init() {
 	$file_dir=get_bloginfo('template_directory');
 	wp_enqueue_style("functions", $file_dir."/includes/admin.css", false, "1.0", "all");
-	wp_enqueue_script("admin_script", $file_dir."/includes/admin.js", false, "1.0");
 }
 
 function mytheme_admin() {
@@ -199,7 +170,7 @@ case "section":
 	?>
     <div class="rm_section">
     <div class="rm_title">
-      <h3><img src="<?php bloginfo('template_directory')?>/images/trans.png" class="inactive" alt="""><?php echo $value['name']; ?></h3>
+      <h3><?php echo $value['name']; ?></h3>
       <span class="submit">
       <input name="save<?php echo $i; ?>" type="submit" value="Save changes" class="button button-primary button-large" />
       </span>

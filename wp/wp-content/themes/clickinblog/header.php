@@ -20,9 +20,20 @@
 <link rel="profile" href="http://gmpg.org/xfn/11" />
 <link rel="pingback" href="<?php bloginfo( 'pingback_url' ); ?>" />
 
+
+<?php 
+	if(get_option('clickIn_no_of_posts')) { 
+		$numOFPosts = get_option('clickIn_no_of_posts'); 
+	} else { 
+		$numOFPosts = 4; 
+	} 
+?>
+
 <script type="text/javascript">
 var templateDir = "<?php bloginfo('template_directory'); ?>";
+var numOfPosts = "<?php echo $numOFPosts; ?>";
 </script>
+
 <?php // Loads HTML5 JavaScript file to add support for HTML5 elements in older IE versions. ?>
 <!--[if lt IE 9]>
 	<script src="http://html5shiv.googlecode.com/svn/trunk/html5.js" type="text/javascript"></script>
@@ -34,19 +45,32 @@ var templateDir = "<?php bloginfo('template_directory'); ?>";
 
 <header class="site-header clearfix">
   <nav class="main-menu clearfix">
-    <ul>
-      <li><a href="#">Home</a></li>
-      <li><a href="#">Clickin' blog</a></li>
-    </ul>
+		<?php
+      if (has_nav_menu('primary')) {
+        wp_nav_menu( array( 'theme_location'  => 'primary') );
+      } else {
+        echo "Please add a Menu from the 'admin panel > Appearance > Menus' and add it to 'Primary' location.";
+      }
+    ?>
   </nav><!-- .main-menu -->
   
   <div class="site-logo"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" title="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>" rel="home"><img src="<?php bloginfo('template_directory'); ?>/images/logo.png" width="234" height="113" alt="CLICKIN' Blog"></a></div><!-- .site-logo -->
   
   <div class="social-links clearfix">
     <ul>
-      <li><a href="#" title="Pinterest" class="pinterest"></a></li>
-      <li><a href="#" title="Facebook" class="facebook"></a></li>
-      <li><a href="#" title="Twitter" class="twitter"></a></li>
+
+	    <?php if(get_option('clickIn_pintUrl')) { ?>
+	      <li><a href="<?php echo get_option('clickIn_pintUrl'); ?>" title="Pinterest" class="pinterest" target="_blank"></a></li>
+      <?php } ?>
+
+	    <?php if(get_option('clickIn_fbUrl')) { ?>
+	      <li><a href="<?php echo get_option('clickIn_fbUrl'); ?>" title="Facebook" class="facebook" target="_blank"></a></li>
+      <?php } ?>
+
+	    <?php if(get_option('clickIn_twUrl')) { ?>
+	      <li><a href="<?php echo get_option('clickIn_twUrl'); ?>" title="Twitter" class="twitter" target="_blank"></a></li>
+      <?php } ?>
+
     </ul>
   </div><!-- .social-links --> 
   

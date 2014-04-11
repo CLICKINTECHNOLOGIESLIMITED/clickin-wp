@@ -23,7 +23,7 @@ $page = (isset($_GET['pageNumber'])) ? $_GET['pageNumber'] : 0;
       <div class="article-wrap">
         <div class="article-header">
           <h3>News</h3>
-          <span class="comments-count"><a href="#"><?php $comments_count = wp_count_comments(); echo $comments_count->total_comments; ?></a></span>
+          <span class="comments-count"><a href="<?php the_permalink(); ?>#comments" title="Read Comments"><?php $comments_count = wp_count_comments(get_the_ID()); echo $comments_count->total_comments; ?> Comments</a></span>
           <span class="timeline-arrow"></span>
           <span class="timeline-circle"></span>
         </div><!-- .article-header -->
@@ -45,9 +45,9 @@ $page = (isset($_GET['pageNumber'])) ? $_GET['pageNumber'] : 0;
             <div class="published-date"><?php echo get_the_date('d F, Y', '', '', FALSE); ?></div><!-- .published-date -->
             
             <div class="social-share">
-              <ul>
+              <ul>              
                 <li><a href="#" class="pinterest" title="Share on Pinterest"></a></li>
-                <li><a href="#" class="facebook" title="Share on Facebook"></a></li>
+                <li><a href="https://www.facebook.com/sharer/sharer.php?u=<?php echo urlencode(get_permalink()); ?>" class="facebook" title="Share on Facebook" onclick="return popitup('https://www.facebook.com/sharer/sharer.php?u=<?php echo urlencode(get_permalink()); ?>)"></a></li>
                 <li><a href="#" class="twitter" title="Share on Twitter"></a></li>
               </ul>
             </div><!-- .social-share --> 

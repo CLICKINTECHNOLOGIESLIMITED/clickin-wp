@@ -49,7 +49,7 @@
 				var load_posts = function(){
 								$.ajax({
 										type       : "GET",
-										data       : {numPosts : 2, pageNumber: page},
+										data       : {numPosts : numOfPosts, pageNumber: page},
 										dataType   : "html",
 										url        : templateDir + "/loop-handler.php",
 										success    : function(data){
@@ -89,3 +89,11 @@
 
 
 })(jQuery);
+
+
+function popitup(url) {
+	newwindow=window.open(url,'name','height=500,width=500');
+	if (window.focus) {newwindow.focus()}
+	return false;
+}
+//Social feeds See more End
