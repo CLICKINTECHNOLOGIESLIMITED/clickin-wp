@@ -63,7 +63,7 @@ $page = (isset($_GET['pageNumber'])) ? $_GET['pageNumber'] : 0;
               <ul>              
                 <li><a href="#" class="pinterest" title="Share on Pinterest"></a></li>
                 <li><a href="https://www.facebook.com/sharer/sharer.php?u=<?php echo urlencode(get_permalink()); ?>" class="facebook" title="Share on Facebook" onclick="return popitup('https://www.facebook.com/sharer/sharer.php?u=<?php echo urlencode(get_permalink()); ?>')"></a></li>
-                <li><a  href="https://twitter.com/share?text=<?php echo urlencode(get_permalink()) . get_the_excerpt();?>" onclick="return popitup('https://twitter.com/share?text=<?php echo urlencode(get_permalink()) . get_the_excerpt(); ?>')" class="twitter" title="Share on Twitter"></a></li>
+                <li><a  href="https://twitter.com/share?text=<?php echo urlencode(get_permalink());?>" onclick="return popitup('https://twitter.com/share?text=<?php echo urlencode(get_permalink()); ?>')" class="twitter" title="Share on Twitter"></a></li>
               </ul>
             </div><!-- .social-share --> 
           </div><!-- .article-meta --> 
