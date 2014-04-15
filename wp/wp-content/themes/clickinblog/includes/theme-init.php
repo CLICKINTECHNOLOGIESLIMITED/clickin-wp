@@ -13,6 +13,11 @@ function theme_setup() {
 	add_theme_support( 'post-thumbnails' );
 	set_post_thumbnail_size( 986, 9999 ); // Unlimited height, soft crop
 	add_theme_support( 'automatic-feed-links' );	
+	
+	if ( function_exists( 'add_image_size' ) ) { 
+		add_image_size( 'homepage-thumb', 378, 235, true ); //(cropped)
+	}
+	
 }
 add_action( 'after_setup_theme', 'theme_setup' );
 
@@ -40,6 +45,15 @@ function add_scripts_styles() {
 		 true
 	);
 	wp_enqueue_script('jquery-masonry-min');
+
+	wp_register_script(
+		'imagesloaded-pkgd',
+		 get_template_directory_uri() . '/javascripts/imagesloaded.pkgd.min.js',  
+		 array('jquery'),
+		 '3.1.4', 
+		 true
+	);
+	wp_enqueue_script('imagesloaded-pkgd');
 
 
 	wp_register_script(  
