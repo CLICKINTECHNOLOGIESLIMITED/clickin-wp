@@ -63,12 +63,8 @@
 														blogList.blogs.lookup.init();
 														
 												} else {
-													clickHandler.html('<a href="#">No More Videos!</a>');
+													
 												}
-										},
-										error : function(jqXHR, textStatus, errorThrown) {
-												clickHandler.html('Error!');
-												//alert(jqXHR + " :: " + textStatus + " :: " + errorThrown);
 										}
 						});
 				}
