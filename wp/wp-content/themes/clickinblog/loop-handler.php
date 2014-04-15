@@ -31,9 +31,24 @@ $page = (isset($_GET['pageNumber'])) ? $_GET['pageNumber'] : 0;
         <div class="article-content">
           <h2><a href="<?php the_permalink(); ?>" title="<?php the_title(); ?>"><?php the_title(); ?></a></h2>
           
-          <?php if(has_post_thumbnail()) { ?>
-          <div class="article-media"><?php the_post_thumbnail(); ?></div><!-- .article-media -->
+          <?php if(get_post_meta(get_the_ID(),'videoCode',TRUE)) { ?>
+					
+          <div class="article-media">
+	          <div class="video-wrapper">
+			        <div class="video-container">
+								<?php echo stripslashes(get_post_meta(get_the_ID(),'videoCode',TRUE)); ?> 
+              </div><!-- .video-wrapper -->
+            </div><!-- .video-container -->
+          </div><!-- .article-media -->
+
+					<?php } else { ?>
+          
+						<?php if(has_post_thumbnail()) { ?>
+          <div class="article-media"><?php the_post_thumbnail('large'); ?></div><!-- .article-media -->
+            <?php } ?>
+          
           <?php } ?>
+          
           
           <div class="article-desc">
           	
@@ -47,7 +62,7 @@ $page = (isset($_GET['pageNumber'])) ? $_GET['pageNumber'] : 0;
             <div class="social-share">
               <ul>              
                 <li><a href="#" class="pinterest" title="Share on Pinterest"></a></li>
-                <li><a href="https://www.facebook.com/sharer/sharer.php?u=<?php echo urlencode(get_permalink()); ?>" class="facebook" title="Share on Facebook" onclick="return popitup('https://www.facebook.com/sharer/sharer.php?u=<?php echo urlencode(get_permalink()); ?>)"></a></li>
+                <li><a href="https://www.facebook.com/sharer/sharer.php?u=<?php echo urlencode(get_permalink()); ?>" class="facebook" title="Share on Facebook" onclick="return popitup('https://www.facebook.com/sharer/sharer.php?u=<?php echo urlencode(get_permalink()); ?>')"></a></li>
                 <li><a href="#" class="twitter" title="Share on Twitter"></a></li>
               </ul>
             </div><!-- .social-share --> 

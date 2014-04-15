@@ -269,7 +269,7 @@ body {
 		padding:15px 22px 18px;
 		.article-media {
 			margin-bottom:24px;
-			* {
+			img {
 				max-width:100%;
 				height:auto;
 			}
@@ -342,6 +342,24 @@ body {
 	}
 
 }
+.video-wrapper {
+	max-width: 100%;
+	.video-container {
+		position: relative;
+		padding-bottom: 56.25%;
+		padding-top: 30px;
+		height: 0;
+		overflow: hidden;
+		iframe, object, embed {
+			position: absolute;
+			top: 0;
+			left: 0;
+			max-width: 100%;
+			height: 100%;
+		}
+	}
+}
+
 .home-list:nth-child(even) {
 	.article-wrap {
 		border:1px solid #41e4f0;

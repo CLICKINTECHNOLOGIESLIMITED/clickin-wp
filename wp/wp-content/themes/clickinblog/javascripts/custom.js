@@ -21,7 +21,7 @@
 							var msnry = new Masonry( container, {
 								itemSelector: '.home-list',
 							});
-						blogList.blogs.lookup.arrow_Points();
+							blogList.blogs.lookup.arrow_Points();
 				});
 			},
 			arrow_Points: function () {

@@ -5,9 +5,10 @@
 <!--[if IE 8]>
 <html class="ie ie8" <?php language_attributes(); ?>>
 <![endif]-->
-<!--[if !(IE 7) | !(IE 8)  ]><!-->
+<!--[if !(IE 7) | !(IE 8) ]><!-->
 <html <?php language_attributes(); ?>>
-<!--<![endif]--><head>
+<!--<![endif]-->
+<head>
 <meta charset="<?php bloginfo( 'charset' ); ?>" />
 <meta http-equiv="X-UA-Compatible" content="IE=Edge;chrome=1">
  
@@ -28,10 +29,9 @@
 		$numOFPosts = 4; 
 	} 
 ?>
-
 <script type="text/javascript">
-var templateDir = "<?php bloginfo('template_directory'); ?>";
-var numOfPosts = "<?php echo $numOFPosts; ?>";
+var templateDir = '<?php echo get_template_directory_uri(); ?>';
+var numOfPosts = <?php echo $numOFPosts; ?>;
 </script>
 
 <?php // Loads HTML5 JavaScript file to add support for HTML5 elements in older IE versions. ?>

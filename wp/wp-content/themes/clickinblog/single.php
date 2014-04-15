@@ -14,13 +14,29 @@
       <h1><?php the_title(); ?></h1>
     </header><!-- .single-post-header -->
     
-		<?php if(has_post_thumbnail()) { ?>
+		
+		
+		<?php if(get_post_meta(get_the_ID(),'videoCode',TRUE)) { ?>
+    
+    <div class="single-post-media">
+      <div class="video-wrapper">
+        <div class="video-container">
+          <?php echo stripslashes(get_post_meta(get_the_ID(),'videoCode',TRUE)); ?> 
+        </div><!-- .video-wrapper -->
+      </div><!-- .video-container -->
+    </div><!-- .single-post-media -->
+
+    <?php } else { ?>
+  
+			<?php if(has_post_thumbnail()) { ?>
 
     <div class="single-post-media">
       
-			<?php the_post_thumbnail(); ?>
+				<?php the_post_thumbnail(); ?>
     
     </div><!-- .single-post-media -->
+
+	    <?php } ?>
 
     <?php } ?>
     
