@@ -5,37 +5,7 @@
 
 	/***************** Blog Masonry Timeline Setup *******************/
 	
-	var blogList;
-	if (!blogList) {
-			blogList = {
-					blogs: {}
-			};
-	} else if (!blogList.blogs) {
-			blogList.blogs = {}
-	}
 
-	blogList.blogs.lookup = {
-			init: function () {
-				$(function () {
-							var container = document.querySelector('.blog-articles');
-							var msnry = new Masonry( container, {
-								itemSelector: '.home-list',
-							});
-							blogList.blogs.lookup.arrow_Points();
-				});
-			},
-			arrow_Points: function () {
-					var s = $('.blog-articles').find('.home-list');
-					$.each(s, function (i, obj) {
-							var posLeft = $(obj).css("left");
-							if (posLeft == "0px") {
-									$(obj).addClass('arrow-right');
-							}
-					});
-			}
-	};
-
-		
 	
 	
 	
@@ -43,6 +13,15 @@
 	$(function(){
 
 		if($('body').find('.blog-articles').length > 0) {
+				// masonry Init
+				$container = $('.blog-articles');
+				$container.imagesLoaded(function(){ 
+						$container.masonry({
+							 itemSelector: '.home-list'
+						}); 
+				});
+	
+				//Ajax call setup
 				var page = 1;
 				var loading = true;
 				var $content = $(".blog-articles");
@@ -53,31 +32,61 @@
 										dataType   : "html",
 										url        : templateDir + "/loop-handler.php",
 										success    : function(data){
-												$data = $(data);
-												if($data.length){
-														$data.hide();
-														$content.append($data);
-														$data.fadeIn(500, function(){
-																loading = false;
-														});
-														blogList.blogs.lookup.init();
-														
-												} else {
-													
-												}
+												masonryPrependAppend(data);
 										}
 						});
 				}
+				
+				//Load more at windows scroll
 				$(window).scroll(function() {
 					 if($(window).scrollTop() + $(window).height() > $(document).height() - 200) {
 							if(!loading) {
-											loading = true;
-											page++;
-											load_posts();
+									loading = true;
+									page++;
+									load_posts();
 							}
 					 }
 				});
+				
+				// Load initial posts
 				load_posts();
+				
+				// Masonry Prepend/Append
+				function masonryPrependAppend(data){
+					$data = $(data);
+					if($data.length){													
+						var $data = $(data).filter(".home-list");													
+						$data.hide();
+						if(page == 1) {
+							$container.prepend($data).imagesLoaded(function(){
+									$container.masonry( 'prepended', $data, true );
+									setTimelineArrows();
+							});
+						} else {
+							$container.append($data).imagesLoaded(function(){
+										$container.masonry( 'appended', $data, true );
+										setTimelineArrows();
+							});
+						}
+						
+						$data.fadeIn(500, function(){						
+							loading = false;
+						});												
+							
+					}
+				} 
+				
+				//Set timeline arrows left or right based on the post position
+				function setTimelineArrows() {
+						var s = $('.blog-articles').find('.home-list');
+						$.each(s, function (i, obj) {
+								var posLeft = $(obj).css("left");
+								if (posLeft == "0px") {
+										$(obj).addClass('arrow-right');
+								}
+						});
+				}
+				
 		}
 	});
 
