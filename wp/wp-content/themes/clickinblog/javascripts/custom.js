@@ -3,11 +3,6 @@
 	    _window = $(window);
 	
 
-	/***************** Blog Masonry Timeline Setup *******************/
-	
-
-	
-	
 	
 	/************************************** Home post Load **************************************/
 	$(function(){
@@ -17,7 +12,9 @@
 				$container = $('.blog-articles');
 				$container.imagesLoaded(function(){ 
 						$container.masonry({
-							 itemSelector: '.home-list'
+							 itemSelector: '.home-list',
+							 visibleStyle: { opacity: 1, },
+							 hiddenStyle:  { opacity: 0,  }
 						}); 
 				});
 	
@@ -69,7 +66,7 @@
 							});
 						}
 						
-						$data.fadeIn(500, function(){						
+						$data.fadeIn(400, function(){						
 							loading = false;
 						});												
 							
