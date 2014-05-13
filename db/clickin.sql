@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: localhost
--- Generation Time: May 13, 2014 at 09:52 AM
+-- Generation Time: May 13, 2014 at 10:52 AM
 -- Server version: 5.5.24-log
 -- PHP Version: 5.3.13
 
@@ -116,7 +116,7 @@ CREATE TABLE IF NOT EXISTS `wp_options` (
   `autoload` varchar(20) NOT NULL DEFAULT 'yes',
   PRIMARY KEY (`option_id`),
   UNIQUE KEY `option_name` (`option_name`)
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=336 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=340 ;
 
 --
 -- Dumping data for table `wp_options`
@@ -243,11 +243,9 @@ INSERT INTO `wp_options` (`option_id`, `option_name`, `option_value`, `autoload`
 (261, 'can_compress_scripts', '1', 'yes'),
 (291, '_site_transient_timeout_browser_ad0f13cf1963685b3e1355f9374f265a', '1398849821', 'yes'),
 (292, '_site_transient_browser_ad0f13cf1963685b3e1355f9374f265a', 'a:9:{s:8:"platform";s:7:"Windows";s:4:"name";s:6:"Chrome";s:7:"version";s:13:"34.0.1847.116";s:10:"update_url";s:28:"http://www.google.com/chrome";s:7:"img_src";s:49:"http://s.wordpress.org/images/browsers/chrome.png";s:11:"img_src_ssl";s:48:"https://wordpress.org/images/browsers/chrome.png";s:15:"current_version";s:2:"18";s:7:"upgrade";b:0;s:8:"insecure";b:0;}', 'yes'),
-(311, '_site_transient_timeout_theme_roots', '1399975291', 'yes'),
-(312, '_site_transient_theme_roots', 'a:4:{s:11:"clickinblog";s:7:"/themes";s:14:"twentyfourteen";s:7:"/themes";s:14:"twentythirteen";s:7:"/themes";s:12:"twentytwelve";s:7:"/themes";}', 'yes'),
 (314, '_site_transient_timeout_browser_710ad1dd7409f078fa401b586108ea26', '1400578298', 'yes'),
 (315, '_site_transient_browser_710ad1dd7409f078fa401b586108ea26', 'a:9:{s:8:"platform";s:7:"Windows";s:4:"name";s:6:"Chrome";s:7:"version";s:13:"34.0.1847.131";s:10:"update_url";s:28:"http://www.google.com/chrome";s:7:"img_src";s:49:"http://s.wordpress.org/images/browsers/chrome.png";s:11:"img_src_ssl";s:48:"https://wordpress.org/images/browsers/chrome.png";s:15:"current_version";s:2:"18";s:7:"upgrade";b:0;s:8:"insecure";b:0;}', 'yes'),
-(316, '_site_transient_update_themes', 'O:8:"stdClass":4:{s:12:"last_checked";i:1399973707;s:7:"checked";a:4:{s:11:"clickinblog";s:0:"";s:14:"twentyfourteen";s:3:"1.0";s:14:"twentythirteen";s:3:"1.1";s:12:"twentytwelve";s:3:"1.3";}s:8:"response";a:3:{s:14:"twentyfourteen";a:4:{s:5:"theme";s:14:"twentyfourteen";s:11:"new_version";s:3:"1.1";s:3:"url";s:43:"https://wordpress.org/themes/twentyfourteen";s:7:"package";s:60:"https://wordpress.org/themes/download/twentyfourteen.1.1.zip";}s:14:"twentythirteen";a:4:{s:5:"theme";s:14:"twentythirteen";s:11:"new_version";s:3:"1.2";s:3:"url";s:43:"https://wordpress.org/themes/twentythirteen";s:7:"package";s:60:"https://wordpress.org/themes/download/twentythirteen.1.2.zip";}s:12:"twentytwelve";a:4:{s:5:"theme";s:12:"twentytwelve";s:11:"new_version";s:3:"1.4";s:3:"url";s:41:"https://wordpress.org/themes/twentytwelve";s:7:"package";s:58:"https://wordpress.org/themes/download/twentytwelve.1.4.zip";}}s:12:"translations";a:0:{}}', 'yes'),
+(316, '_site_transient_update_themes', 'O:8:"stdClass":4:{s:12:"last_checked";i:1399977558;s:7:"checked";a:4:{s:11:"clickinblog";s:0:"";s:14:"twentyfourteen";s:3:"1.0";s:14:"twentythirteen";s:3:"1.1";s:12:"twentytwelve";s:3:"1.3";}s:8:"response";a:3:{s:14:"twentyfourteen";a:4:{s:5:"theme";s:14:"twentyfourteen";s:11:"new_version";s:3:"1.1";s:3:"url";s:43:"https://wordpress.org/themes/twentyfourteen";s:7:"package";s:60:"https://wordpress.org/themes/download/twentyfourteen.1.1.zip";}s:14:"twentythirteen";a:4:{s:5:"theme";s:14:"twentythirteen";s:11:"new_version";s:3:"1.2";s:3:"url";s:43:"https://wordpress.org/themes/twentythirteen";s:7:"package";s:60:"https://wordpress.org/themes/download/twentythirteen.1.2.zip";}s:12:"twentytwelve";a:4:{s:5:"theme";s:12:"twentytwelve";s:11:"new_version";s:3:"1.4";s:3:"url";s:41:"https://wordpress.org/themes/twentytwelve";s:7:"package";s:58:"https://wordpress.org/themes/download/twentytwelve.1.4.zip";}}s:12:"translations";a:0:{}}', 'yes'),
 (317, '_site_transient_update_plugins', 'O:8:"stdClass":3:{s:12:"last_checked";i:1399973500;s:8:"response";a:1:{s:19:"akismet/akismet.php";O:8:"stdClass":6:{s:2:"id";s:2:"15";s:4:"slug";s:7:"akismet";s:6:"plugin";s:19:"akismet/akismet.php";s:11:"new_version";s:5:"3.0.0";s:3:"url";s:38:"https://wordpress.org/plugins/akismet/";s:7:"package";s:56:"https://downloads.wordpress.org/plugin/akismet.3.0.0.zip";}}s:12:"translations";a:0:{}}', 'yes'),
 (318, '_transient_timeout_feed_ac0b00fe65abe10e0c5b588f3ed8c7ca', '1400016709', 'no');
 INSERT INTO `wp_options` (`option_id`, `option_name`, `option_value`, `autoload`) VALUES
@@ -269,8 +267,9 @@ INSERT INTO `wp_options` (`option_id`, `option_name`, `option_value`, `autoload`
 (331, '_transient_plugin_slugs', 'a:2:{i:0;s:19:"akismet/akismet.php";i:1;s:9:"hello.php";}', 'no'),
 (332, '_transient_timeout_dash_4077549d03da2e451c8b5f002294ff51', '1400016715', 'no'),
 (333, '_transient_dash_4077549d03da2e451c8b5f002294ff51', '<div class="rss-widget"><ul><li><a class=''rsswidget'' href=''http://wordpress.org/news/2014/05/wordpress-3-9-1/'' title=''After three weeks and more than 9 million downloads of WordPress 3.9, we’re pleased to announce that WordPress 3.9.1 is now available. This maintenance release fixes 34 bugs in 3.9, including numerous fixes for multisite networks, customizing widgets while previewing themes, and the updated visual editor. We’ve also made some improvements to the new audio/video […]''>WordPress 3.9.1 Maintenance Release</a> <span class="rss-date">May 8, 2014</span><div class=''rssSummary''>After three weeks and more than 9 million downloads of WordPress 3.9, we’re pleased to announce that WordPress 3.9.1 is now available. This maintenance release fixes 34 bugs in 3.9, including numerous fixes for multisite networks, customizing widgets while previewing themes, and the updated visual editor. We’ve also made some improvements to the new audio/vi [&hellip;]</div></li></ul></div><div class="rss-widget"><ul><li><a class=''rsswidget'' href=''http://wordpress.tv/2014/05/12/pavel-ungr-vyuzijte-50-nejlepsich-seo-pluginu-pro-wordpress/'' title=''    ''>WordPress.tv: Pavel Ungr: Využijte 50 nejlepších SEO pluginů pro WordPress</a></li><li><a class=''rsswidget'' href=''http://wordpress.tv/2014/05/12/helena-denley-making-your-website-business-friendly/'' title=''    ''>WordPress.tv: Helena Denley: Making Your Website Business Friendly</a></li><li><a class=''rsswidget'' href=''http://wordpress.tv/2014/05/12/peter-gramantik-website-security-and-wordpress/'' title=''    ''>WordPress.tv: Peter Gramantik: Website Security And WordPress</a></li></ul></div><div class="rss-widget"><ul><li class=''dashboard-news-plugin''><span>Popular Plugin:</span> <a href=''http://wordpress.org/plugins/wysija-newsletters/'' class=''dashboard-news-plugin-link''>MailPoet Newsletters</a></h5>&nbsp;<span>(<a href=''plugin-install.php?tab=plugin-information&amp;plugin=wysija-newsletters&amp;_wpnonce=59333fe8b7&amp;TB_iframe=true&amp;width=600&amp;height=800'' class=''thickbox'' title=''MailPoet Newsletters''>Install</a>)</span></li></ul></div>', 'no'),
-(334, '_transient_is_multi_author', '0', 'yes'),
-(335, 'theme_mods_twentyfourteen', 'a:1:{s:16:"sidebars_widgets";a:2:{s:4:"time";i:1399973720;s:4:"data";a:4:{s:19:"wp_inactive_widgets";a:0:{}s:9:"sidebar-1";a:6:{i:0;s:8:"search-2";i:1;s:14:"recent-posts-2";i:2;s:17:"recent-comments-2";i:3;s:10:"archives-2";i:4;s:12:"categories-2";i:5;s:6:"meta-2";}s:9:"sidebar-2";a:0:{}s:9:"sidebar-3";a:0:{}}}}', 'yes');
+(335, 'theme_mods_twentyfourteen', 'a:1:{s:16:"sidebars_widgets";a:2:{s:4:"time";i:1399973720;s:4:"data";a:4:{s:19:"wp_inactive_widgets";a:0:{}s:9:"sidebar-1";a:6:{i:0;s:8:"search-2";i:1;s:14:"recent-posts-2";i:2;s:17:"recent-comments-2";i:3;s:10:"archives-2";i:4;s:12:"categories-2";i:5;s:6:"meta-2";}s:9:"sidebar-2";a:0:{}s:9:"sidebar-3";a:0:{}}}}', 'yes'),
+(336, '_site_transient_timeout_theme_roots', '1399978801', 'yes'),
+(337, '_site_transient_theme_roots', 'a:4:{s:11:"clickinblog";s:7:"/themes";s:14:"twentyfourteen";s:7:"/themes";s:14:"twentythirteen";s:7:"/themes";s:12:"twentytwelve";s:7:"/themes";}', 'yes');
 
 -- --------------------------------------------------------
 
@@ -286,7 +285,7 @@ CREATE TABLE IF NOT EXISTS `wp_postmeta` (
   PRIMARY KEY (`meta_id`),
   KEY `post_id` (`post_id`),
   KEY `meta_key` (`meta_key`)
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=1092 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=1439 ;
 
 --
 -- Dumping data for table `wp_postmeta`
@@ -760,7 +759,76 @@ INSERT INTO `wp_postmeta` (`meta_id`, `post_id`, `meta_key`, `meta_value`) VALUE
 (1088, 10, 'ID', '10'),
 (1089, 10, 'post_content', 'Vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim qui blandit praesent luptatum zzril delenit augue duis dolore te feugait nulla facilisi. Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat.\r\n\r\nNam liber tempor cum soluta nobis eleifend option congue nihil imperdiet doming id quod mazim placerat facer possim assum. Typi non habent claritatem insitam; est usus legentis in iis qui facit eorum claritatem. Investigationes demonstraverunt lectores legere me lius quod ii legunt saepius. Claritas est etiam processus dynamicus, qui sequitur mutationem consuetudium lectorum. Mirum est notare quam littera gothica, quam nunc putamus parum claram.'),
 (1090, 10, 'post_excerpt', ''),
-(1091, 10, 'to_ping', '');
+(1091, 10, 'to_ping', ''),
+(1232, 64, '_edit_last', '1'),
+(1233, 64, '_edit_lock', '1399978134:1'),
+(1333, 64, '_wpnonce', '2e1e397d62'),
+(1335, 64, '_wp_http_referer', '/github/clickin-wp/wp/wp-admin/post-new.php'),
+(1337, 64, 'user_ID', '1'),
+(1339, 64, 'action', 'editpost'),
+(1341, 64, 'originalaction', 'editpost'),
+(1343, 64, 'post_author', '1'),
+(1345, 64, 'post_type', 'post'),
+(1347, 64, 'original_post_status', 'auto-draft'),
+(1349, 64, 'referredby', 'http://dev.sourcefuse.com/clickin/clickin-wp/wp/wp-admin/'),
+(1351, 64, '_wp_original_http_referer', 'http://dev.sourcefuse.com/clickin/clickin-wp/wp/wp-admin/'),
+(1353, 64, 'auto_draft', '0'),
+(1355, 64, 'post_ID', '64'),
+(1357, 64, 'autosavenonce', '5b11d8dab3'),
+(1359, 64, 'meta-box-order-nonce', 'd25093ce4f'),
+(1361, 64, 'closedpostboxesnonce', 'cf61923fb7'),
+(1363, 64, 'post_title', 'test post'),
+(1365, 64, 'samplepermalinknonce', '973957c35c'),
+(1367, 64, 'content', 'test post'),
+(1369, 64, 'wp-preview', ''),
+(1371, 64, 'hidden_post_status', 'draft'),
+(1373, 64, 'post_status', 'publish'),
+(1375, 64, 'hidden_post_password', ''),
+(1377, 64, 'hidden_post_visibility', 'public'),
+(1379, 64, 'visibility', 'public'),
+(1381, 64, 'post_password', ''),
+(1383, 64, 'mm', '05'),
+(1385, 64, 'jj', '13'),
+(1387, 64, 'aa', '2014'),
+(1389, 64, 'hh', '10'),
+(1391, 64, 'mn', '49'),
+(1393, 64, 'ss', '49'),
+(1395, 64, 'hidden_mm', '05'),
+(1397, 64, 'cur_mm', '05'),
+(1399, 64, 'hidden_jj', '13'),
+(1401, 64, 'cur_jj', '13'),
+(1403, 64, 'hidden_aa', '2014'),
+(1404, 64, 'cur_aa', '2014'),
+(1406, 64, 'hidden_hh', '10'),
+(1408, 64, 'cur_hh', '10'),
+(1411, 64, 'hidden_mn', '49'),
+(1412, 64, 'cur_mn', '49'),
+(1413, 64, 'original_publish', 'Publish'),
+(1414, 64, 'publish', 'Publish'),
+(1415, 64, 'post_category', 'a:1:{i:0;s:1:"0";}'),
+(1416, 64, 'newcategory', 'New Category Name'),
+(1417, 64, 'newcategory_parent', '-1'),
+(1418, 64, '_ajax_nonce-add-category', 'eba720c462'),
+(1419, 64, 'tax_input', 'a:1:{s:8:"post_tag";s:0:"";}'),
+(1420, 64, 'newtag', 'a:1:{s:8:"post_tag";s:0:"";}'),
+(1421, 64, 'videoCode', ''),
+(1422, 64, 'my_meta_noncename', '101605d0d4'),
+(1423, 64, 'excerpt', ''),
+(1424, 64, 'trackback_url', ''),
+(1425, 64, 'metakeyselect', '#NONE#'),
+(1426, 64, 'metakeyinput', ''),
+(1427, 64, 'metavalue', ''),
+(1428, 64, '_ajax_nonce-add-meta', 'f11f9fc0f1'),
+(1429, 64, 'advanced_view', '1'),
+(1430, 64, 'comment_status', 'open'),
+(1431, 64, 'ping_status', 'open'),
+(1432, 64, 'post_name', ''),
+(1433, 64, 'post_author_override', '1'),
+(1434, 64, 'post_mime_type', ''),
+(1435, 64, 'ID', '64'),
+(1436, 64, 'post_content', 'test post'),
+(1437, 64, 'post_excerpt', ''),
+(1438, 64, 'to_ping', '');
 
 -- --------------------------------------------------------
 
@@ -797,7 +865,7 @@ CREATE TABLE IF NOT EXISTS `wp_posts` (
   KEY `type_status_date` (`post_type`,`post_status`,`post_date`,`ID`),
   KEY `post_parent` (`post_parent`),
   KEY `post_author` (`post_author`)
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=62 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=66 ;
 
 --
 -- Dumping data for table `wp_posts`
@@ -837,7 +905,9 @@ INSERT INTO `wp_posts` (`ID`, `post_author`, `post_date`, `post_date_gmt`, `post
 (58, 1, '2014-04-08 09:25:41', '2014-04-08 09:25:41', 'Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat.Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim qui blandit praesent luptatum zzril delenit augue duis dolore te feugait nulla facilisi.Nam liber tempor cum soluta nobis eleifend option congue nihil imperdiet doming id quod mazim placerat facer possim assum. Typi non habent claritatem insitam; est usus legentis in iis qui facit eorum claritatem. Investigationes demonstraverunt lectores legere me lius quod ii legunt saepius. Claritas est etiam processus dynamicus, qui sequitur mutationem consuetudium lectorum. Mirum est notare quam littera gothica, quam nunc putamus parum claram.', 'Dignissim qui blandit praesent luptatum zzril ', '', 'publish', 'open', 'open', '', 'dignissim-qui-blandit-praesent-luptatum-zzril', '', '', '2014-04-23 09:26:42', '2014-04-23 09:26:42', '', 0, 'http://dev.sourcefuse.com/clickin/clickin-wp/wp/?p=58', 0, 'post', '', 0),
 (59, 1, '2014-04-23 09:26:42', '2014-04-23 09:26:42', 'Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat.Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim qui blandit praesent luptatum zzril delenit augue duis dolore te feugait nulla facilisi.Nam liber tempor cum soluta nobis eleifend option congue nihil imperdiet doming id quod mazim placerat facer possim assum. Typi non habent claritatem insitam; est usus legentis in iis qui facit eorum claritatem. Investigationes demonstraverunt lectores legere me lius quod ii legunt saepius. Claritas est etiam processus dynamicus, qui sequitur mutationem consuetudium lectorum. Mirum est notare quam littera gothica, quam nunc putamus parum claram.', 'Dignissim qui blandit praesent luptatum zzril ', '', 'inherit', 'open', 'open', '', '58-revision-v1', '', '', '2014-04-23 09:26:42', '2014-04-23 09:26:42', '', 58, 'http://dev.sourcefuse.com/clickin/clickin-wp/wp/?p=59', 0, 'revision', '', 0),
 (60, 1, '2014-04-23 09:27:22', '0000-00-00 00:00:00', 'Vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim qui blandit praesent luptatum zzril delenit augue duis dolore te feugait nulla facilisi. Nam liber tempor cum soluta nobis eleifend option congue nihil imperdiet doming id quod mazim placerat facer possim assum. Typi non habent claritatem insitam; est usus legentis in iis qui facit eorum claritatem. Investigationes demonstraverunt lectores legere me lius quod ii legunt saepius. Claritas est etiam processus dynamicus, qui sequitur mutationem consuetudium lectorum. Mirum est notare quam littera gothica, quam nunc putamus parum claram.', 'Claritas est etiam processus dynamicus', '', 'draft', 'open', 'open', '', '', '', '', '2014-04-23 09:27:22', '2014-04-23 09:27:22', '', 0, 'http://dev.sourcefuse.com/clickin/clickin-wp/wp/?p=60', 0, 'post', '', 0),
-(61, 1, '2014-05-13 09:31:39', '0000-00-00 00:00:00', '', 'Auto Draft', '', 'auto-draft', 'open', 'open', '', '', '', '', '2014-05-13 09:31:39', '0000-00-00 00:00:00', '', 0, 'http://dev.sourcefuse.com/clickin/clickin-wp/wp/?p=61', 0, 'post', '', 0);
+(61, 1, '2014-05-13 09:31:39', '0000-00-00 00:00:00', '', 'Auto Draft', '', 'auto-draft', 'open', 'open', '', '', '', '', '2014-05-13 09:31:39', '0000-00-00 00:00:00', '', 0, 'http://dev.sourcefuse.com/clickin/clickin-wp/wp/?p=61', 0, 'post', '', 0),
+(64, 1, '2014-05-13 10:50:03', '2014-05-13 10:50:03', 'test post', 'test post', '', 'publish', 'open', 'open', '', 'test-post', '', '', '2014-05-13 10:50:14', '2014-05-13 10:50:14', '', 0, 'http://dev.sourcefuse.com/clickin/clickin-wp/wp/?p=64', 0, 'post', '', 0),
+(65, 1, '2014-05-13 10:50:03', '2014-05-13 10:50:03', 'test post', 'test post', '', 'inherit', 'open', 'open', '', '64-revision-v1', '', '', '2014-05-13 10:50:03', '2014-05-13 10:50:03', '', 64, 'http://dev.sourcefuse.com/clickin/clickin-wp/wp/?p=65', 0, 'revision', '', 0);
 
 -- --------------------------------------------------------
 
@@ -892,7 +962,8 @@ INSERT INTO `wp_term_relationships` (`object_id`, `term_taxonomy_id`, `term_orde
 (27, 3, 0),
 (55, 1, 0),
 (58, 1, 0),
-(60, 1, 0);
+(60, 1, 0),
+(64, 1, 0);
 
 -- --------------------------------------------------------
 
@@ -917,7 +988,7 @@ CREATE TABLE IF NOT EXISTS `wp_term_taxonomy` (
 --
 
 INSERT INTO `wp_term_taxonomy` (`term_taxonomy_id`, `term_id`, `taxonomy`, `description`, `parent`, `count`) VALUES
-(1, 1, 'category', '', 0, 7),
+(1, 1, 'category', '', 0, 8),
 (2, 2, 'post_format', '', 0, 0),
 (3, 3, 'nav_menu', '', 0, 2);
 
