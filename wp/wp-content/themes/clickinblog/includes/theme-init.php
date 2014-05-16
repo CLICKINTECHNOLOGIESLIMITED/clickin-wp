@@ -10,6 +10,19 @@ function theme_setup() {
 	add_editor_style();
 	register_nav_menu( 'primary', 'Primary Menu' );
 
+
+	if ( function_exists('register_sidebar') ) {
+   register_sidebar(array(
+	 'name' => 'Post page sidebar',
+	 'id' => 'post-page-sidebar',
+	 'description' => 'Add wtdgets to display on the post page.',
+   'before_widget' => '<li id="%1$s" class="widget %2$s">',
+   'after_widget' => '</li>',
+   'before_title' => '<h2 class="widgettitle">',
+   'after_title' => '</h2>'
+   ));
+	}
+	
 	add_theme_support( 'post-thumbnails' );
 	set_post_thumbnail_size( 986, 9999 ); // Unlimited height, soft crop
 	add_theme_support( 'automatic-feed-links' );	

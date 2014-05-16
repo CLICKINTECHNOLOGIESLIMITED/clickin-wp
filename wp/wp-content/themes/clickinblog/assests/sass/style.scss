@@ -18,7 +18,7 @@ $primaryFont: "AvenirNextL TPro MediumCn", Verdana, sans-serif;
 }
 
 .home-list a,
-.blog-articles .home-list .article-content .article-meta .social-share li a {
+.blog-articles .home-list .article-content .article-meta .social-share li a, .postWidgets a {
 	@include css-transition(all, .3s, ease);
 }
 
@@ -233,17 +233,17 @@ body {
 		.timeline-arrow {
 			background:url(images/arrow-left-pink.png) no-repeat;
 			background-size:18px;
-			width:18px;
+			width:4.24%;
 			height:18px;
 			position:absolute;
 			right:auto;
-			left:-18px;
+			left:-4.24%;
 			top:14px;
 		}
 		.timeline-circle {
-			background:url(images/timeline-circle.png) no-repeat;
-			background-size:27px;
-			width:27px;
+			background:url(images/timeline-circle.png) no-repeat center center;
+			background-size:100%;
+			width:6.36%;
 			height:27px;
 			position:absolute;
 			left: -12.25%;
@@ -254,9 +254,9 @@ body {
 	&.arrow-right {
 		.article-header {
 			.timeline-arrow {
-				background:url(images/arrow-right-pink.png) no-repeat;
+				background:url(images/arrow-right-pink.png) no-repeat right;
 				background-size:18px;
-				right:-18px;
+				right:-4.24%;
 				left:auto;
 			}
 			.timeline-circle {
@@ -429,6 +429,62 @@ body {
 			font-size:24px;
 			line-height:30px;
 			color:#7f7f7f;		
+		}
+	}
+}
+.pageLeft {
+	float:left;
+	width:70%;
+}
+.pageRight {
+	float:right;
+	width:28%;
+}
+.postWidgets {
+	margin-top:73px;
+	li.widget {
+		margin-bottom:35px;
+		list-style-type:none;
+		.widgettitle {
+			font-size: 30px;
+			line-height: 35px;
+			margin-bottom: 13px;
+			color:#f29691;
+		}
+		ul > li {
+			margin-bottom:12px;
+			font-size:18px;
+		}
+	}
+	a {
+		color:#666;
+		&:hover {
+			color:#e5746e;
+		}
+	}
+	.widget_recent_entries {
+		.post-date {
+			display: block;
+			font-size: 11px;
+			line-height: 20px;
+			color: #aaa;
+			margin-top: 2px;
+		}
+	}
+	.widget_recent_comments {
+		li.recentcomments {
+			font-size:11px;
+			color:#aaa;
+			a {
+				display:block !important;
+				margin-top:1px !important;
+				font-size:18px;
+				&.url {
+					font-size:11px;
+					color:#aaa;
+					display:inline !important;
+				}
+			}
 		}
 	}
 }
@@ -770,19 +826,8 @@ body {
 	margin-bottom: 0;
 }
 
-
-
-
 /* =Media Queries
 ----------------------------------------------- */
-@media only screen and (min-width: 750px) and (max-width: 900px) {
-	.home-list .article-content .article-meta .published-date {
-		font-size:19px;
-	}
-}
+@import "mobile";
 
-@media only screen and (min-width: 640px) and (max-width: 749px) {
-	.home-list .article-content .article-meta .published-date {
-		font-size:13px;
-	}
-}
+
