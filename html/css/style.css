@@ -1,0 +1,104 @@
+/* css reset */
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video { padding: 0; margin: 0; border: 0; font-size: 100%; font: inherit; vertical-align: baseline; }
+
+@font-face {
+  font-family:'AVENIRNEXTLTPRO-MEDIUMCN';
+  src: url( '../fonts/AVENIRNEXTLTPRO-MEDIUMCN.eot'); /* IE9 Compat Modes */
+  src: url( '../fonts/AVENIRNEXTLTPRO-MEDIUMCN.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+       url( '../fonts/AVENIRNEXTLTPRO-MEDIUMCN.woff') format('woff'), /* Modern Browsers */
+       url( '../fonts/AVENIRNEXTLTPRO-MEDIUMCN.ttf')  format('truetype'), /* Safari, Android, iOS */
+       url( '../fonts/AVENIRNEXTLTPRO-MEDIUMCN.svg#svgFontName') format('svg'); /* Legacy iOS */
+}
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section { display: block; }
+body { font-family: AVENIRNEXTLTPRO-MEDIUMCN, arial; font-size: 12px; color: #8c806e; }
+ol, ul { list-style: none; }
+blockquote, q { quotes: none; }
+blockquote:before, blockquote:after,
+q:before, q:after { content: ''; content: none; }
+table { border-collapse: collapse; border-spacing: 0; }
+
+
+/* Global CSS */
+a, input { outline: none; }
+a { color: #f00; text-decoration: none; }
+.clear { clear: both; height: 0; }
+img { width: 100%; height: auto; }
+.center { margin: 0 auto; max-width: 1280px; overflow: hidden; }
+h1, h2, h3, h4, h5, h6 { font-family: AVENIRNEXTLTPRO-MEDIUMCN; font-size: 49px; color: #8c806e; }
+
+p { font-family: AVENIRNEXTLTPRO-MEDIUMCN; font-size: 49px; font-weight: bold; line-height: 45px; color: #ffffff; }
+
+/* wrapper box start */
+.wrapper{ width: 100%; }
+/* wrapper box end */
+
+/* header start */
+header{ width: 100%; min-height: 79px; background: #001734;  }
+header .logo { position: absolute; top: 20px; left: 50%; margin-left: -120px; width: 300px; float: left; }
+header .logo a { display: block; text-indent: -9999px; width: 240px; height: 120px; background: url(../images/logo.png) left top no-repeat; }
+/* header end */
+
+/* nav start */
+nav{ padding-left: 35px; width: 350px; float: left; display: none; }
+nav ul { padding: 26px 0px; list-style: none; }
+nav ul li { padding-right: 21px; float: left; font-size: 16px; text-transform: uppercase; font-weight: bold; }
+nav ul li a { color: #606e8e; text-decoration: none; }
+nav ul li a:hover { color: #ffffff; }
+/* nav end */
+
+/* sociable start */
+.sociableBox { padding: 25px 0px; float: right; }
+.sociableBox ul li { padding-left: 14px; line-height: 33px; float: left; font-size: 16px; text-transform: uppercase; font-weight: bold; }
+.sociableBox ul li a { color: #606e8e; text-decoration: none; }
+.sociableBox ul li a:hover { color: #ffffff; }
+.sociableBox ul li a.facebook{ padding-top: 4px; display: block; text-indent: -9999px; width: 24px; height: 25px; background: url(../images/sociable-icon.png) left 4px no-repeat; }
+.sociableBox ul li.gap { padding-left: 9px;}
+.sociableBox ul li a.twitter{ padding-top: 4px; display: block; text-indent: -9999px; width: 24px; height: 25px; background: url(../images/sociable-icon.png) right 4px no-repeat; }
+.sociableBox ul li input[type="text"]{ padding: 5px 10px; float: left; line-height: 20px; width: 108px; border-radius: 4px 0px 0px 4px; -webkit-border-radius: 4px 0px 0px 4px; -moz-border-radius: 4px 0px 0px 4px; border: none; background: #e6e6e6; }
+.sociableBox ul li input[type="submit"]{ padding: 5px 9px; margin-left: -1px; line-height: 20px; border-radius: 0px 4px 4px 0px; -webkit-border-radius: 0px 4px 4px 0px; -moz-border-radius: 0px 4px 4px 0px; border: none; font-family:'AVENIRNEXTLTPRO-MEDIUMCN'; font-size: 16px; text-transform: uppercase; font-weight: bold; color: #ffffff; cursor: pointer; background: #f29691; }
+/* sociable end */
+
+/* content container start */
+.contentCntr { overflow: hidden; background: url(../images/background.png) top center no-repeat; background-size:cover; }
+/* content container end */
+
+/* signup box start */
+.signupBox{ padding: 0px 0px 81px 64px; margin: 10% 0px 0px 0px; width: 57%; float: left; background: url(../images/blue-stip.png) right top no-repeat; }
+.signupBox h1 { margin: 90px 0px 11px 0px; width: 386px; height: 65px; display: block; text-indent: -9999px; background: url(../images/logo-heading.png) left top no-repeat; }
+.signupBox fieldset {padding-top: 13px; float: left; border: none;}
+
+.signupBox input[type="text"]{ padding: 5px 10px; float: left; line-height: 34px; width: 170px; border-radius: 4px 0px 0px 4px; -webkit-border-radius: 4px 0px 0px 4px; -moz-border-radius: 4px 0px 0px 4px; border: none; background: #e6e6e6; }
+
+.signupBox input[type="submit"]{ padding: 5px 14px; margin-left: -1px; line-height: 34px; border-radius: 0px 4px 4px 0px; -webkit-border-radius: 0px 4px 4px 0px; -moz-border-radius: 0px 4px 4px 0px; border: none; font-family:'AVENIRNEXTLTPRO-MEDIUMCN'; font-size: 25px; text-transform: uppercase; font-weight: bold; color: #ffffff; cursor: pointer; background: #f29691; }
+.signupBox a.watchvideo { padding: 0px 61px 0px 18px; margin: 15px 0px 0px 11px; line-height: 44px; float: left; font-family:'AVENIRNEXTLTPRO-MEDIUMCN'; font-size: 25px; text-transform: uppercase; font-weight: bold; color: #ffffff; background: #00b1c9 url(../images/arrow.png) right center no-repeat; border-radius: 4px; -webkit-border-radius: 4px; -moz-border-radius: 4px; }
+
+
+@-moz-document url-prefix() { 
+  .sociableBox ul li input[type="submit"]{
+     line-height: 18px; float: left;
+  }
+  
+  .signupBox input[type="submit"] { line-height: 32px; }
+  .signupBox a.watchvideo { margin-top: 13px;}
+}
+
+
+/* signup box end */
+
+
+/* mobile box start */
+.mobileBox { margin: 30px 68px 40px 0px; float: right; width: 340px; height: 667px; background: url(../images/mobile.png) right center no-repeat; }
+.mobileBox figure { margin: 112px auto 0 auto; max-width: 254px;}
+/* mobile box end */
+
+/* footer start */
+footer{ padding: 20px 0px; width: 100%; background: #CCC; overflow: hidden; background: #f7f7f7; }
+footer ul { float: left; display: none; }
+footer ul li { padding-left: 20px; font-size: 16px; float: left; }
+footer p { float: right; font-size: 16px; line-height: normal; color: #656565; font-weight: normal;  }
+footer ul li a { color: #656565; }
+/* footer end */
+
+
