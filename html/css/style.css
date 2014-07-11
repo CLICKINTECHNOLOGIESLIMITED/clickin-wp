@@ -739,7 +739,7 @@ nav ul {
  @media screen and (min-width: 320px) and (max-width: 640px) {
 footer ul { display: none;}
 .contentCntr {
-	height: 550px;
+	height: 600px;
 	margin-top: 49px;
 }
 .mobileBox {
@@ -765,7 +765,7 @@ footer ul { display: none;}
 	float: none;
 	background-position: center;
 	text-align: center;
-	height: 170px;
+	height: 146px;
 	;
 }
 .signup_blue_box {
