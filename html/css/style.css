@@ -743,22 +743,22 @@ footer ul { display: none;}
 	margin-top: 49px;
 }
 .mobileBox {
-	background-size: 85% auto;
-	padding: 12px 21px 5px 54px;
-	width: 130px;
+	background-size: 100% auto;
+	padding: 29px 13px 25px 12px;
+	width: 84px;
 	height: auto;
-	margin: 5% auto 0;
+	margin: 35px auto 0;
 	float: none;
 }
 .mobileBox figure {
-	margin: 54px auto;
+	margin: 0 auto;
 	max-width: 254px;
 	height: auto;
 }
 .signupBox {
 	width: 100%;
 	background-size: 100%;
-	padding: 10px 0;
+	padding: 4px 0;
 	margin: 5px 0px 0px 0px;
 	background-image: none;
 	background-color: #1e283d;
@@ -817,7 +817,7 @@ footer ul { display: none;}
 }
 .signupBox input[type="submit"], .signup_blue_box input[type="submit"] {
 	padding: 5px;
-	line-height: 18px;
+	line-height: 20px;
 	font-size: 14px;
 }
 .signupBox fieldset, .signup_blue_box fieldset {
@@ -835,6 +835,7 @@ header .logo a {
 header .logo {
 	width: 21%;
 	top: 40px;
+	left: 59%;
 }
 .thankyou {
 	font-size: 17px;
