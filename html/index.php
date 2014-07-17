@@ -4,7 +4,8 @@
 <head>
 	<meta charset="utf-8">
 	<meta name="SKYPE_TOOLBAR" content="SKYPE_TOOLBAR_PARSER_COMPATIBLE" />
-	<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+  <meta name="apple-mobile-web-app-capable" content="yes">
 	<title>Clickin</title>
 	<link href="css/style.css" type="text/css" rel="stylesheet">
 	<script src="js/jquery-1.11.0.min.js"></script>
@@ -85,42 +86,53 @@
   
 <div class="fixedMobile">
 		<div class="fixedWrapper">
+        <!-- signup box start -->
+        <section class="signupBox">
+        	<div class="signUpBoxWrap">
+            <h1>Clickin</h1>
+            <p>IS THE SIMPLEST AND FASTEST <br>
+              WAY TO EXPRESS YOURSELF</p>
+            <form method="POST" action="" class=""> 
+              <div class="signupContainer">
+                <fieldset id="abs">
+                  <input type="text" placeholder="Enter email" name="email"/>
+                  <input type="hidden" name="m" value="1" />
+                  <input class="submit" type="submit" value="sign up" />
+                </fieldset>
+              </div>
+              <span class="align"><a href="#" class="watchvideo">Watch Video</a></span>
+              <div class="clear"></div>
+            </form>
+            </div><!-- .signUpBoxWrap -->
+        </section>
+        <!-- signup box end -->
+				
+        <div class="mobileBoxMobile">
+        	<img src="images/mobile-screen.png">
+        </div><!-- .mobileBoxMobile -->
+        
         <!-- mobile box start -->
         <section class="mobileBox">
         	<div class="phoneFrame"><img src="images/mobile.png"></div>
           <div class="phoneScreens">
-          	<div class="screenImage" id="screen1"><img id="originalImage" src="images/screen1.jpg" alt="clickin"></div>
-          	<div class="screenImage" id="screen2"><img id="originalImage" src="images/screen2.png" alt="clickin"></div>
-          	<div class="screenImage" id="screen3"><img id="originalImage" src="images/screen3.png" alt="clickin"></div>
-          	<div class="screenImage" id="screen4"><img id="originalImage" src="images/screen4.png" alt="clickin"></div>
-          	<div class="screenImage" id="screen5"><img id="originalImage" src="images/screen5.png" alt="clickin"></div>
+          	<div class="screenImage" id="screen1"><img id="originalImage" src="images/img-1.jpg" alt="clickin"></div>
+          	<div class="screenImage" id="screen2"><img id="originalImage" src="images/img-2.jpg" alt="clickin"></div>
+          	<div class="screenImage" id="screen3"><img id="originalImage" src="images/img-3.jpg" alt="clickin"></div>
+          	<div class="screenImage" id="screen4"><img id="originalImage" src="images/img-4.jpg" alt="clickin"></div>
+          	<div class="screenImage" id="screen5"><img id="originalImage" src="images/img-5.jpg" alt="clickin"></div>
+          	<div class="screenImage" id="screen6"><img id="originalImage" src="images/img-6.jpg" alt="clickin"></div>
           </div><!-- .phoneScreens -->
         </section>
         <!-- mobile box end --> 
         
-        <!-- signup box start -->
-        <section class="signupBox">
-          <h1>Clickin</h1>
-          <p>IS THE SIMPLEST AND FASTEST <br>
-            WAY TO EXPRESS YOURSELF</p>
-          <form method="POST" action=""> 
-            <div class="signupContainer">
-              <fieldset id="abs">
-                <input type="text" placeholder="Enter email" name="email"/>
-                <input type="hidden" name="m" value="1" />
-                <input class="submit" type="submit" value="sign up" />
-              </fieldset>
-            </div>
-            <span class="align"><a href="#" class="watchvideo">Watch Video</a></span>
-          </form>
-        </section>
-        <!-- signup box end -->
+
+
         <div class="clear"></div>
 		</div><!-- fixedWrapper -->
 </div><!--  -->
   
   <!-- content article start -->
-  <article class="contentCntr lastPage" id="screen6">
+  <article class="contentCntr lastPage" id="screen7">
       <!--Start blueBg-->
       <div class="blueBg content">
       	<div class="widthWrap">

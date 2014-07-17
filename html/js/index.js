@@ -1,6 +1,9 @@
 $(document).ready(function () {
 
     preparePages();
+		$(window).on('resize',function(){
+			preparePages();
+		});
     var scrolling = false;
     var previousTimestamp = 0
     var wheelDelta = 0;
@@ -39,6 +42,7 @@ $(document).ready(function () {
     }
 
     function touchMoveHandle(event) {
+			event.preventDefault();
 			if (scrolling || (event.timeStamp - previousTimestamp < 50)) {
 					previousTimestamp = event.timeStamp;
 					console.log("Scrolling. Ignore");
@@ -62,25 +66,36 @@ $(document).ready(function () {
 			}, 500);
     }
     var currentPage = 1;
-    var totalPages = 6;
+    var totalPages = 7;
     var didMovePage = false;
     var duration = 500;
 		
     function preparePages() {
+			if($(window).width() > 768) {
         $('.screenImage, .lastPage').css({opacity: 0});
         $('.screenImage, .lastPage').hide();
 
         $('.screenImage#screen1').css({opacity: 1});
-        $('.screenImage#screen1').show();				
+        $('.screenImage#screen1').show();
+			} else {
+				$('.lastPage').css({opacity: 1});
+				$('.lastPage').show();
+			}
 
         $('body').bind('DOMMouseScroll mousewheel wheel', function (event) {
-            wheelHandle(event);
+					if($(window).width() > 768) {
+						wheelHandle(event);
+					}
         });
         $('body').bind('touchstart', function (event) {
+					if($(window).width() > 768) {
             touchStartHandle(event);
+					}
         });
         $('body').bind('touchmove', function (event) {
+					if($(window).width() > 768) {
             touchMoveHandle(event);
+					}
         });
    }
 
@@ -88,7 +103,7 @@ $(document).ready(function () {
         if (currentPage == page) {
             return;
         }
-        if (page == 5) {
+        if (page == 7) {
             $('#overlay').animate({
                 'opacity': 0
             }, 450, function () {
@@ -110,15 +125,20 @@ $(document).ready(function () {
             });
         }
         didMovePage = true;
-
-        $('#screen' + currentPage).animate({
-            'opacity': 0,
-            'margin-top': -8
-        }, 450, function () {
-            $(this).hide();
-        });
+				
+				if (page != 7) {
+					$('#screen' + currentPage).animate({
+							'opacity': 0,
+							'margin-top': -8
+					}, 450, function () {
+							$(this).hide();
+					});
+				}
+				
+				
         setTimeout(function () {
             $('#screen' + page).show();
+						
             $('#screen' + page).css({
                 opacity: 0,
                 'margin-top': 8

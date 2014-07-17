@@ -35,20 +35,23 @@ $(document).ready(function(){
 	
 	$(function(){
 		 function positionElements() {
-			windowHeight = _window.height()-142;
-			$('.fixedMobile, .contentCntr').css('height',windowHeight);
-			if($('.mobileBox').height() > 649) {
-				$('.mobileBox').css({'top':'50%','margin-top':-350});
-			} else {
-				$('.mobileBox').css({'top':'5%','margin-top':0});
-			}
-			
+			 if(_window.width() > 768) {
+					windowHeight = _window.height()-142;
+					$('.fixedMobile, .contentCntr').css('height',windowHeight);
+					if($('.mobileBox').height() > 649) {
+						$('.mobileBox').css({'top':'50%','margin-top':-350});
+					} else {
+						$('.mobileBox').css({'top':'5%','margin-top':0});
+					}
+			 } else {
+					$('.fixedMobile, .contentCntr').css('height','auto');
+			 }
 		 }
-		
-			positionElements();
-			_window.on('resize',function(){
-				positionElements()
-			});
+
+		positionElements();
+		_window.on('resize',function(){
+				positionElements();
+		});
 		
 	});
 })(jQuery);		
