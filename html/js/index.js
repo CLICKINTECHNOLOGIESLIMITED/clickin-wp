@@ -1,77 +1,6 @@
 $(document).ready(function () {
-    var isPopMenuShowing = false;
-    $(".menu").click(function (event) {
-        isPopMenuShowing = true;
-        event.preventDefault();
-    });
-    $(".close2").click(function (event) {
-        isPopMenuShowing = false;
-        event.preventDefault();
-    });
-    document.ontouchmove = function (event) {
-        console.log("Touch move " + event);
-        if (!isPopMenuShowing) {
-            event.preventDefault();
-        }
-    }
-    var cookieSet = getCookie("set");
-    if (cookieSet == "") {
-        var rand = Math.ceil(Math.random() * 2);
-        switch (rand) {
-        case 1:
-            {
-                cookieSet = "Fun"
-                break;
-            }
-        case 2:
-            {
-                cookieSet = "Happy"
-                break;
-            }
-        }
-        setCookie("set", cookieSet);
-    }
-    var currentSet = cookieSet;
-    if (currentSet == "Fun") {
-        $("#background1").css("background-image", "url(/images/a.jpg)");
-    } else if (currentSet == "Seductive") {
-        $("#background1").css("background-image", "url(/images/a2.jpg)");
-    } else if (currentSet == "Happy") {
-        $("#background1").css("background-image", "url(/images/a3.jpg)");
-    } else {
-        $("#background1").css("background-image", "url(/images/a.jpg)");
-    }
-    mixpanel.track_links(".signup", "Signup", function () {
-        var params = {};
-        params.set = currentSet;
-        params.page = currentPage;
-        return params;
-    });
-    mixpanel.track_links(".download", "GetTheApp", function () {
-        var params = {};
-        params.set = currentSet;
-        params.page = currentPage;
-        return params;
-    });
-    $(".header").css({
-        "position": "absolute"
-    });
+
     preparePages();
-    var videoStart = null;
-    $(".fancybox").fancybox({
-        'width': '75%',
-        'height': '75%',
-        'autoScale': false,
-        'transitionIn': 'none',
-        'transitionOut': 'none',
-        'type': 'iframe',
-        'padding': '0',
-        'hideOnOverlayClick': 'true',
-        afterShow: function () {
-            mixpanel.track("Video Play");
-        },
-        beforeClose: function () {}
-    });
     var scrolling = false;
     var previousTimestamp = 0
     var wheelDelta = 0;
@@ -90,32 +19,16 @@ $(document).ready(function () {
             scrolling = true;
             previousTimestamp = event.timeStamp;
             previousPage();
-            setTimeout(function () {
-                $('#blocker').css({
-                    left: x,
-                    top: y
-                });
-            });
         } else if (wheelDelta < -20) {
             scrolling = true;
             previousTimestamp = event.timeStamp;
             nextPage();
-            setTimeout(function () {
-                $('#blocker').css({
-                    left: x,
-                    top: y
-                });
-            });
         }
         if (scrolling) {
             event.stopPropagation();
             wheelDelta = 0;
             setTimeout(function () {
                 scrolling = false;
-                $('#blocker').css({
-                    left: -20,
-                    top: -20
-                });
             }, 500);
         }
     }
@@ -126,155 +39,50 @@ $(document).ready(function () {
     }
 
     function touchMoveHandle(event) {
-        if (scrolling || (event.timeStamp - previousTimestamp < 50)) {
-            previousTimestamp = event.timeStamp;
-            console.log("Scrolling. Ignore");
-            return;
-        }
-        var point = getPointFromEvent(event);
-        if (point[1] - originalTouch[1] < -20) {
-            scrolling = true;
-            previousTimestamp = event.timeStamp;
-            nextPage();
-        } else if (point[1] - originalTouch[1] > 20) {
-            scrolling = true;
-            previousTimestamp = event.timeStamp;
-            previousPage();
-        }
-        console.log("Scrolling started.");
-        setTimeout(function () {
-            console.log("Scrolling ended.");
-            scrolling = false;
-            $('#blocker').css({
-                left: 0,
-                top: 0
-            });
-        }, 500);
+			if (scrolling || (event.timeStamp - previousTimestamp < 50)) {
+					previousTimestamp = event.timeStamp;
+					console.log("Scrolling. Ignore");
+					return;
+			}
+			var point = getPointFromEvent(event);
+			if (point[1] - originalTouch[1] < -20) {
+					scrolling = true;
+					previousTimestamp = event.timeStamp;
+					nextPage();
+			} else if (point[1] - originalTouch[1] > 20) {
+					scrolling = true;
+					previousTimestamp = event.timeStamp;
+					previousPage();
+			}
+			console.log("Scrolling started.");
+			setTimeout(function () {
+					console.log("Scrolling ended.");
+					scrolling = false;
+
+			}, 500);
     }
     var currentPage = 1;
-    var totalPages = 7;
+    var totalPages = 6;
     var didMovePage = false;
     var duration = 500;
-    var bounceInterval = setInterval(function () {
-        if (!didMovePage) {
-            var originalMarginBottom = $('.footer').outerHeight();
-            if (originalMarginBottom) {
-                originalMarginBottom = parseInt(originalMarginBottom);
-                $('#bouncy').animate({
-                    'margin-bottom': originalMarginBottom + 20
-                }, duration, "easeOutQuad");
-                setTimeout(function () {
-                    $('#bouncy').animate({
-                        'margin-bottom': originalMarginBottom
-                    }, duration, "easeInQuad");
-                }, duration + 100);
-            }
-        } else {
-            clearInterval(bounceInterval);
-        }
-    }, 2 * duration + 200);
-
+		
     function preparePages() {
-        $('#background1').css({
-            opacity: 1
-        });
-        $('#background2').css({
-            opacity: 0
-        });
-        $('#background3').css({
-            opacity: 0
-        });
-        $('#background4').css({
-            opacity: 0
-        });
-        $('#background5').css({
-            opacity: 0
-        });
-        $('#navtitle1').css({
-            opacity: 1
-        });
-        $('#navtitle2').css({
-            opacity: 0
-        });
-        $('#navtitle3').css({
-            opacity: 0
-        });
-        $('#navtitle4').css({
-            opacity: 0
-        });
-        $('#navtitle5').css({
-            opacity: 0
-        });
-        $('#content1').css({
-            opacity: 1
-        });
-        $('#content1').show();
-        $('#content2').css({
-            opacity: 0
-        });
-        $('#content2').hide();
-        $('#content3').css({
-            opacity: 0
-        });
-        $('#content3').hide();
-        $('#content4').css({
-            opacity: 0
-        });
-        $('#content4').hide();
-        $('#content5').css({
-            opacity: 0
-        });
-				 $('#content5').hide();
-        $('#content6').css({
-            opacity: 0
-        });
-				 $('#content6').hide();
-        $('#content7').css({
-            opacity: 0
-        });
-        $('#content7').hide();
-        $('.navitem1').addClass('selected');
-        $('#sensor,.sidenav,.header,.footer,.content').bind('DOMMouseScroll mousewheel wheel', function (event) {
+        $('.screenImage, .lastPage').css({opacity: 0});
+        $('.screenImage, .lastPage').hide();
+
+        $('.screenImage#screen1').css({opacity: 1});
+        $('.screenImage#screen1').show();				
+
+        $('body').bind('DOMMouseScroll mousewheel wheel', function (event) {
             wheelHandle(event);
         });
-        $('#sensor,.sidenav,.header,.footer,.content').bind('touchstart', function (event) {
+        $('body').bind('touchstart', function (event) {
             touchStartHandle(event);
         });
-        $('#sensor,.sidenav,.header,.footer,.content').bind('touchmove', function (event) {
+        $('body').bind('touchmove', function (event) {
             touchMoveHandle(event);
         });
-        $('#blocker').bind('DOMMouseScroll mousewheel wheel', function (event) {
-            event.preventDefault();
-        });
-        $('.prev').click(function (event) {
-            previousPage();
-            event.preventDefault();
-        });
-        $('.next').click(function (event) {
-            nextPage();
-            event.preventDefault();
-        });
-        $('.navitem1').click(function (event) {
-            goToPage(1);
-            event.preventDefault();
-        });
-        $('.navitem2').click(function (event) {
-            goToPage(2);
-            event.preventDefault();
-        });
-        $('.navitem3').click(function (event) {
-            goToPage(3);
-            event.preventDefault();
-        });
-        $('.navitem4').click(function (event) {
-            goToPage(4);
-            event.preventDefault();
-        });
-        $('.navitem5').click(function (event) {
-            goToPage(5);
-            event.preventDefault();
-        });
-    }
+   }
 
     function goToPage(page) {
         if (currentPage == page) {
@@ -302,33 +110,20 @@ $(document).ready(function () {
             });
         }
         didMovePage = true;
-        $('#background' + currentPage).animate({
-            opacity: 0
-        }, 700);
-        $('#background' + page).animate({
-            opacity: 1
-        }, 700);
-        $('#navtitle' + currentPage).animate({
-            opacity: 0
-        });
-        $('#navtitle' + page).animate({
-            opacity: 1
-        }, 700);
-        $('.navitem' + currentPage).removeClass('selected');
-        $('.navitem' + page).addClass('selected');
-        $('#content' + currentPage).animate({
+
+        $('#screen' + currentPage).animate({
             'opacity': 0,
             'margin-top': -8
         }, 450, function () {
             $(this).hide();
         });
         setTimeout(function () {
-            $('#content' + page).show();
-            $('#content' + page).css({
+            $('#screen' + page).show();
+            $('#screen' + page).css({
                 opacity: 0,
                 'margin-top': 8
             });
-            $('#content' + page).animate({
+            $('#screen' + page).animate({
                 opacity: 1,
                 'margin-top': 0
             }, 450);
@@ -408,26 +203,4 @@ $(document).ready(function () {
         return [x, y];
     }
 
-    function setCookie(name, value) {
-        var d = new Date();
-        d.setTime(d.getTime() + (24 * 60 * 60 * 1000));
-        var expires = "expires=" + d.toGMTString();
-        document.cookie = name + "=" + value + "; " + expires;
-    }
-
-    function getCookie(name) {
-        var name = name + "=";
-        var ca = document.cookie.split(';');
-        for (var i = 0; i < ca.length; i++) {
-            var c = ca[i].trim();
-            if (c.indexOf(name) == 0) {
-                return c.substring(name.length, c.length);
-            }
-        }
-        return "";
-    }
-
-    function deleteCookie(name) {
-        setCookie(name, "");
-    }
 });

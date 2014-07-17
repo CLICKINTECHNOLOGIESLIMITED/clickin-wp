@@ -83,14 +83,18 @@
   </header>
   <!-- header end --> 
   
-  <!-- content article start -->
-  <article class="contentCntr">
-
-      <div class="content stick" id="content1"> 
-        
+<div class="fixedMobile">
+		<div class="fixedWrapper">
         <!-- mobile box start -->
         <section class="mobileBox">
-          <figure> <img id="originalImage" src="images/screen1.jpg" alt="clickin"> <img id="revertImage" src="images/signup_mobile_img.png" alt="clickin"> </figure>
+        	<div class="phoneFrame"><img src="images/mobile.png"></div>
+          <div class="phoneScreens">
+          	<div class="screenImage" id="screen1"><img id="originalImage" src="images/screen1.jpg" alt="clickin"></div>
+          	<div class="screenImage" id="screen2"><img id="originalImage" src="images/screen2.png" alt="clickin"></div>
+          	<div class="screenImage" id="screen3"><img id="originalImage" src="images/screen3.png" alt="clickin"></div>
+          	<div class="screenImage" id="screen4"><img id="originalImage" src="images/screen4.png" alt="clickin"></div>
+          	<div class="screenImage" id="screen5"><img id="originalImage" src="images/screen5.png" alt="clickin"></div>
+          </div><!-- .phoneScreens -->
         </section>
         <!-- mobile box end --> 
         
@@ -112,135 +116,61 @@
         </section>
         <!-- signup box end -->
         <div class="clear"></div>
-      </div>
-      <div class="content stick" id="content2"> 
-        
-        <!-- mobile box start -->
-        <section class="mobileBox">
-          <figure> <img src="images/screen2.png" alt="clickin"> </figure>
-        </section>
-        <!-- mobile box end --> 
-        
-        <!-- signup box start -->
-        <section class="signup_blue_box">
-          <h3>ADD, INVITE OR FIND A PARTNER <br>
-            TO START CLICKIN’ WITH</h3>
-          <form method="POST" action="">
-            <div class="signupContainer1">
-              <fieldset class="abs">
-                <input type="text" placeholder="Enter email" name="email" />
-                <input type="hidden" name="m" value="1" />
-                <input class="submit" type="submit" value="sign up" />
-              </fieldset>
-            </div>
-          </form>
-        </section>
-        <!-- signup box end --> 
-      </div>
-      <div class="content stick" id="content3"> 
-        
-        <!-- mobile box start -->
-        <section class="mobileBox">
-          <figure><img src="images/screen3.png" alt="clickin"> <img id="revertImage" src="images/signup_mobile_img.png" alt="clickin"></figure>
-        </section>
-        <!-- mobile box end --> 
-        
-        <!-- signup box start -->
-        <section class="signup_blue_box">
-          <h3>DRAG THE CLICKER TO GIVE OR<br>
-            TAKE POINTS FROM ONE ANOTHER</h3>
-          <form method="POST" action="">
-            <div class="signupContainer1">
-              <fieldset class="abs">
-                <input type="text" placeholder="Enter email" name="email" />
-                <input type="hidden" name="m" value="1" />
-                <input class="submit" type="submit" value="sign up" />
-              </fieldset>
-            </div>
-          </form>
-        </section>
-        <!-- signup box end --> 
-      </div>
-      <div class="content stick" id="content4"> 
-        
-        <!-- mobile box start -->
-        <section class="mobileBox">
-          <figure><img src="images/screen4.png" alt="clickin"> <img id="revertImage" src="images/signup_mobile_img.png" alt="clickin"></figure>
-        </section>
-        <!-- mobile box end --> 
-        
-        <!-- signup box start -->
-        <section class="signup_blue_box">
-          <h3>DRAG THE CLICKER TO GIVE OR<br>
-            TAKE POINTS FROM ONE ANOTHER</h3>
-          <form method="POST" action="">
-            <div class="signupContainer1">
-              <fieldset class="abs">
-                <input type="text" placeholder="Enter email" name="email"/>
-                <input type="hidden" name="m" value="1" />
-                <input class="submit" type="submit" value="sign up" />
-              </fieldset>
-            </div>
-          </form>
-        </section>
-        <!-- signup box end --> 
-      </div>
-      <div class="content stick" id="content5"> 
-        
-        <!-- mobile box start -->
-        <section class="mobileBox">
-          <figure><img src="images/screen5.png" alt="clickin"> <img id="revertImage" src="images/signup_mobile_img.png" alt="clickin"></figure>
-        </section>
-        <!-- mobile box end --> 
-        
-        <!-- signup box start -->
-        <section class="signup_blue_box">
-          <p>DRAG THE CLICKER TO GIVE OR<br>
-            TAKE POINTS FROM ONE ANOTHER</p>
-          <form method="POST" action="">
-            <div class="signupContainer1">
-              <fieldset class="abs">
-                <input type="text" placeholder="Enter email" name="email"/>
-                <input type="hidden" name="m" value="1" />
-                <input class="submit" type="submit" value="sign up" />
-              </fieldset>
-            </div>
-          </form>
-        </section>
-        <!-- signup box end --> 
-      </div>
-            <!--Start blueBg-->
-      <div class="blueBg content" id="content6">
-        <ul>
-          <li> <img src="images/img1.png" alt=""/>
-            <p>ADD MULTIPLE PARTNERS</p>
-          </li>
-          <li> <img src="images/img2.png" alt=""/>
-            <p>CONTROL RELATIONSHIP VISIBILITY</p>
-          </li>
-          <li> <img src="images/img3.png" alt=""/>
-            <p>HANDPICK YOUR FOLLOWERS</p>
-          </li>
-          <li> <img src="images/img4.png" alt=""/>
-            <p>SEARCH AND DISCOVER CLICKERS</p>
-          </li>
-          <div class="clear"></div>
-        </ul>
+		</div><!-- fixedWrapper -->
+</div><!--  -->
+  
+  <!-- content article start -->
+  <article class="contentCntr lastPage" id="screen6">
+      <!--Start blueBg-->
+      <div class="blueBg content">
+      	<div class="widthWrap">
+          <ul>
+            <li>
+            	<div class="boxWrap">
+                <p><img src="images/img1.png" alt=""/></p>
+                <p>ADD MULTIPLE PARTNERS</p>
+              </div><!-- .boxWrap -->
+            </li>
+            <li>
+            	<div class="boxWrap">
+                <p><img src="images/img2.png" alt=""/></p>
+                <p>CONTROL RELATIONSHIP VISIBILITY</p>
+              </div><!-- .boxWrap -->
+            </li>
+            <li>
+            	<div class="boxWrap">
+                <p><img src="images/img3.png" alt=""/></p>
+                <p>HANDPICK YOUR FOLLOWERS</p>
+              </div><!-- .boxWrap -->
+            </li>
+            <li>
+            	<div class="boxWrap">
+                <p><img src="images/img4.png" alt=""/></p>
+                <p>SEARCH AND DISCOVER CLICKERS</p>
+              </div><!-- .boxWrap -->
+            </li>
+            <div class="clear"></div>
+          </ul>
+         </div><!-- .widthWrap -->
       </div>
       <!--End blueBg-->
-			<div class="yourScore content" id="content7"> <img src="images/your-score.png" alt=""/>
-      <p>Be it a loyal lover, a casual fling or someone you just met Clickin' is for those who share a connection or want to.</p>
-      <div class="yourScoreContainer">
-		<form method="POST" action="">  
-			<fieldset class="abs">
-			  <input type="text" placeholder="Enter email" name="email" class="email" />
-			  <input type="hidden" name="m" value="1" />
-			  <input class="submit" type="submit" value="sign up" />
-			</fieldset>
-        </form>
-      </div>
+			<div class="yourScore content">
+      	<div class="widthWrap">
+        	<div class="boxWrapWhite">
+            <img src="images/your-score.png" alt=""/>
+            <p>Be it a loyal lover, a casual fling or someone you just met Clickin' is for those who share a connection or want to.</p>
+            <div class="yourScoreContainer">
+          <form method="POST" action="">  
+            <fieldset class="abs">
+              <input type="text" placeholder="Enter email" name="email" class="email" />
+              <input type="hidden" name="m" value="1" />
+              <input class="submit" type="submit" value="sign up" />
+            </fieldset>
+              </form>
+            </div>
+          </div>
+        </div><!-- .widthWrap -->
     </div>      
-      <div id="bouncy"><a class="next" href="#"></a></div>
   </article>
   <!-- content article end --> 
  

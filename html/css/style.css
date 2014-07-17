@@ -87,7 +87,7 @@ header {
 	position: fixed;
 	top: 0;
 	top: 0;
-	z-index: 50;
+	z-index: 1050;
 }
 header .logo {
 	position: absolute;
@@ -202,20 +202,19 @@ nav ul li a:hover {
 
 /* content container start */
 .contentCntr {
-	margin-top: 80px;
-	overflow: hidden;
+	margin-top: 83px !important;
 	background: url("../images/background.png") no-repeat scroll center top / cover rgba(0, 0, 0, 0);
 	background-size: cover;
-	height: 700px;
 }
 /* content container end */
 
 /* signup box start */
 .signupBox {
 	padding: 0px 0px 7% 7%;
-	margin: 100px 0 0 -12px;
 	width: 57%;
-	float: left;
+	position:absolute;
+	top:50%;
+	margin-top:-200px;
 	background: url(../images/blue-stip.png) right top no-repeat;
 }
 .signupBox h1 {
@@ -288,20 +287,6 @@ margin-top: 13px;
 /* signup box end */
 
 
-/* mobile box start */
-.mobileBox {
-	margin: 0 0px 40px 0px;
-	float: right;
-	width: 340px;
-	height: 667px;
-	background: url(../images/mobile.png) right center no-repeat;
-}
-.mobileBox figure {
-	margin: 112px auto 0 auto;
-	max-width: 254px;
-}
-/* mobile box end */
-
 /* footer start */
 footer {
 	padding: 20px 0px;
@@ -368,7 +353,7 @@ footer ul li a {
 	margin: 0;
 	width: 100%;
 	display: table;
-height:100%padding-bottom:88px;
+	height:100%;
 }
 #bouncy {
 	margin: 0 auto;
@@ -450,17 +435,27 @@ height:100%padding-bottom:88px;
 	-moz-border-radius: 4px;
 }
 .blueBg {
+	height:50%;
 	background-color: #00B0C7;
-	padding: 100px 0;
+}
+.blueBg ul {
+	height:100%;
 }
 .blueBg ul li {
 	float: left;
-	width: 20%;
+	width: 25%;
+	height:100%;
 	text-align: center;
-	margin-right: 65px;
 }
 .blueBg ul li img {
-	width: 70%;
+	width: auto;
+	max-width:50%;
+	height:auto;
+}
+.boxWrap p {
+font-size: 1.5rem;
+line-height: 1.5rem;
+margin: 10px 0;
 }
 .blueBg ul li p {
 	font-weight: bold;
@@ -469,7 +464,7 @@ height:100%padding-bottom:88px;
 	margin-right: 0;
 }
 .yourScore {
-	padding: 100px 0;
+	height:50%;
 	text-align: center;
 	width: 100%;
 	background-color: #fff;
@@ -492,12 +487,13 @@ height:100%padding-bottom:88px;
 	font-weight: normal;
 }
 .yourScore img {
-	width: 65%;
+width: auto;
+height: 44%;
 }
 .yourScore p {
-	font-size: 32px;
-	margin: 20px auto;
-	line-height: 34px;
+font-size: 30px;
+margin: 6px auto;
+line-height: 32px;
 	width: 57%;
 }
 .yourScore .abs {
@@ -597,129 +593,7 @@ height:100%padding-bottom:88px;
 
 
 
- @media screen and (min-width: 768px) and (max-width: 959px) {
-.contentCntr {
-	height: 470px;
-}
-.mobileBox {
-	background-size: 92%;
- 	padding: 17px 23px 10px 41px;
-	width: 142px;
-	height: auto;
-	margin: 8% 9% 5% 0;
-}
-.mobileBox figure {
-	margin: 54px auto;
-	max-width: 254px;
-	height: auto;
-}
-.signupBox {
-	width: 60%;
-	background-size: 100%;
-	padding: 0px 0px 7% 3%;
-	margin: 15% 0px 0px 0px;
-}
-.signup_blue_box {
-	padding: 8% 0 14% 3%;
-	width: 60%;
-	background-size: 85%;
-	margin: 15% 0px 0px 0px;
-}
-.signupBox p {
-	font-size: 24px;
-	line-height: 24px;
-}
-.signup_blue_box h3 { 
-	font-size: 24px;
-	line-height: 24px;
-}
-.signupBox h1, .signup_blue_box h1 {
-	margin: 8% 0px 1% 0;
-	width: 87%;
-	height: auto;
-	background-size: 82%;
-}
-.signupBox input[type="text"], .signup_blue_box input[type="text"] {
-	width: 50%;
-	line-height: 24px;
-}
-.signupBox input[type="submit"], .signup_blue_box input[type="submit"] {
-	padding: 5px;
-	line-height: 24px;
-	font-size: 20px;
-}
-.signupBox fieldset, .signup_blue_box fieldset {
-	padding-top: 1%;
-}
-.signupBox a.watchvideo {
-	padding: 0px 36px 0px 12px;
-	line-height: 34px;
-	margin: 6px 0px 0px 0px;
-	font-size: 17px;
-}
-header .logo a {
-	background-size: 70%;
-}
-header .logo {
-	width: 21%;
-	top: 40px;
-}
-.thankyou {
-	font-size: 17px;
-}
-.blueBg ul li p {
-	font-size: 26px;
-	line-height: 25px;
-}
-.blueBg ul li {
-	margin: 0 20px;
-}
-.yourScore {
-	padding: 100px 0;
-	background-color: #fff;
-}
-.yourScore h1 {
-	font-size: 57px;
-}
-.yourScore p {
-	font-size: 20px;
-	line-height: 20px;
-	width: 57%;
-}
-.yourScore img {
-	width: 70%;
-}
-.yourScoreContainer input[type="submit"] {
-	padding: 5px;
-	line-height: 26px;
-	font-size: 14px;
-}
-.yourScoreContainer input[type="text"] {
-	padding: 5px;
-	line-height: 26px;
-	font-size: 14px;
-	width: 160px;
-}
-#bouncy a {
-	margin: -5px auto;
-	height: 25px;
-}
-.yourScore .abs {
-	width: 232px;
-}
-.teamName p {
-	color: #4d4d4d;
-	font-size: 16px;
-	font-weight: normal;
-	line-height: 17px;
-	margin-top: 5px;
-}
-.teamName h3 { font-size: 24px; }
-.teamName h5 { font-size: 18px; }
-.teamPic { width: 20%; }
-.teamContainer { width: 90%; }
-.teamHiring { width: 95%; }
-}
+
  @media screen and (min-width: 641px) and (max-width: 767px) {
 .contentCntr {
 	height: 470px;
@@ -1067,4 +941,91 @@ margin: 0 auto;
 	width: 86%;
 	border-radius: 10px;
 } 
+}
+
+
+
+body {
+	background: url("../images/background.png") no-repeat scroll center top / cover rgba(0, 0, 0, 0);
+background-size: cover;
+}
+.fixedMobile {
+	position:fixed;
+	top:84px;
+	z-index:1003;
+	width: 100%;
+}
+.contentCntr {
+	position:relative;
+	z-index:1004;
+	background:none;
+}
+
+.widthWrap, .fixedContentWrapper, .fixedWrapper {
+	max-width:1280px;
+	margin:0 auto;
+	height:100%;
+	position:relative;
+}
+
+.mobileBox {
+	height:90%;
+	max-height: 650px;
+	position: absolute;
+	top: 5%;
+	right: 0;
+	background:none;
+	z-index:1;
+}
+.phoneFrame {
+	height:100%;
+}
+.phoneFrame img {
+	width:auto;
+	height:100%;
+}
+
+.mobileBox .screenImage {
+	margin: 0;
+	max-width: none;
+	height:100%;
+	width: auto;
+	max-width: none;
+	text-align: right;
+	position: absolute;
+	top: 0;
+	right: 12%;
+}
+.screenImage img {
+	height: 67.3%;
+	width: auto;
+	margin-top: 44%;
+}
+
+.content {
+	overflow:hidden;
+	display:block;
+}
+.content figure {
+	display:inline-block;
+}
+.content figure img {
+	height: 67.3%;
+	width: auto;
+	margin-top: 0%;
+}
+.content .phoneFrame img {
+	opacity:0;
+}
+.boxWrap,.boxWrapWhite {
+	padding: 20px;
+	height: 100%;
+	box-sizing: border-box;
+	-o-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	-ms-box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+}
+.boxWrapWhite {
+	padding: 20px 0;
 }
