@@ -247,7 +247,7 @@
   <!-- footer start -->
   <footer>
     <div class="center">
-      <p>Clickin Technologies Ltd. 2014</p>
+      <p>Clickin Technologies Ltd. 2014 </p>
       <ul>
         <li><a href="#">Faqs</a></li>
         <li><a href="#">Privacy Policy</a></li>
