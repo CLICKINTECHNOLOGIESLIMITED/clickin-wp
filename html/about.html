@@ -7,14 +7,14 @@
 <title>Clickin</title>
 <link href="css/style.css" type="text/css" rel="stylesheet">
 <script src="js/jquery-1.11.0.min.js"></script>
-<script type="text/javascript" src="js/index.js"></script>
 <script src="js/common.js"></script>
 <script type="text/javascript" src="js/jquery.fancybox.min.js"></script>
 </head>
 
 <body>
 
-<!-- mobile menu start -->
+	<div class="mobile-icon">menu icon</div>
+      
 	<div class="mobile-navBox">
 		
 		<div class="mobilemenu">
@@ -26,8 +26,6 @@
 				<li><a href="https://twitter.com/ClickinApp" target="_blank" class="twitter">twitter</a></li>
 			</ul>
 		</div>
-		<div class="mobile-icon">menu icon</div>
-      
 	</div>
 	<!-- mobile menu end -->
 	
@@ -52,7 +50,7 @@
     <div class="center"> 
       
       <!-- logo start -->
-      <div class="logo"> <a href="index.html">Clickin</a> </div>
+      <div class="logo"> <a href="index.php">Clickin</a> </div>
       <!-- logo end --> 
       
       <!-- nav start -->
@@ -163,26 +161,10 @@
   <!-- footer end --> 
  <script>
 $(document).ready(function(){
-	
-	
-	
-	
-$(window).resize(function(){
-if($(window).width() > 640){
-$('.mobile-navBox').css('left','-300');
-}
-});
-	
-	
-  
-      $('.mobile-icon').click(function() {
-        var $lefty = $(".mobile-navBox");
-        $lefty.animate({
-          left: parseInt($lefty.css('left'),10) == 0 ?
-            -$lefty.outerWidth() + 40 :
-            0
-        });
-      });
+	$('.mobile-icon').click(function() {
+		$('.mobile-navBox').slideToggle();
+		
+	});	
 
 })
 </script>

@@ -87,14 +87,14 @@ header {
 	position: fixed;
 	top: 0;
 	top: 0;
-	z-index: 50;
+	z-index: 10000;
 }
 header .logo {
 	position: absolute;
 	top: 20px;
 	left: 50%;
 	margin-left: -120px;
-	width: 300px;
+	width: 240px;
 	float: left;
 }
 header .logo a {
@@ -198,28 +198,36 @@ nav ul li a:hover {
 	cursor: pointer;
 	background: #f29691;
 }
-/* sociable end */
 
-/* content container start */
+
 .contentCntr {
-	margin-top: 80px;
-	overflow: hidden;
+	padding-top: 80px;
+}
+
+.mobileFrame {
 	background: url("../images/background.png") no-repeat scroll center top / cover rgba(0, 0, 0, 0);
 	background-size: cover;
-	height: 700px;
 }
-/* content container end */
+
+.widthWrapper {
+	max-width:1280px;
+	margin:0 auto;
+	width:auto;
+	position:relative;
+}
 
 /* signup box start */
 .signupBox {
-	padding: 0px 0px 7% 7%;
 	margin: 100px 0 0 -12px;
 	width: 57%;
 	float: left;
 	background: url(../images/blue-stip.png) right top no-repeat;
 }
+.signupBoxWrap {
+	margin:12% 0 12% 10%;
+}
 .signupBox h1 {
-	margin: 90px 0px 11px 0px;
+	margin: 0px 0px 11px 0px;
 	width: 386px;
 	height: 65px;
 	display: block;
@@ -296,8 +304,8 @@ margin-top: 13px;
 	height: 667px;
 	background: url(../images/mobile.png) right center no-repeat;
 }
-.mobileBox figure {
-	margin: 112px auto 0 auto;
+.mobileBox .mobileSwiper {
+	margin: 110px auto 0 auto;
 	max-width: 254px;
 }
 /* mobile box end */
@@ -327,6 +335,7 @@ footer p {
 	line-height: normal;
 	color: #656565;
 	font-weight: normal;
+	margin-right: 20px;
 }
 footer ul li a {
 	color: #656565;
@@ -361,25 +370,6 @@ footer ul li a {
 	background-repeat: no-repeat;
 	background-position: center center;
 	background-attachment: fixed;
-}
-.content {
-	background-color: rgba(0,0,0,0);
-	overflow: auto;
-	margin: 0;
-	width: 100%;
-	display: table;
-height:100%padding-bottom:88px;
-}
-#bouncy {
-	margin: 0 auto;
-}
-#bouncy a {
-	background-image: url("../images/nav-arrow-down.png");
-	background-size: 40px 20px;
-	display: table;
-	height: 20px;
-	margin: -50px auto;
-	width: 40px;
 }
 .signup_blue_box {
 	background: url(../images/signup_blue_box.png) no-repeat;
@@ -419,7 +409,9 @@ height:100%padding-bottom:88px;
 	background: #e6e6e6;
 }
 .signup_blue_box input[type="submit"], input[type="submit"] {
-	padding: 4px 14px;
+	-webkit-appearance:none;
+	appearance:none;
+	padding: 5px 14px;
 	margin-left: -1px;
 	line-height: 34px;
 	border-radius: 0px 4px 4px 0px;
@@ -427,9 +419,10 @@ height:100%padding-bottom:88px;
 	-moz-border-radius: 0px 4px 4px 0px;
 	border: none;
 	font-family: 'AVENIRNEXTLTPRO-MEDIUMCN';
-	font-size: 25px;
+	font-size: 23px;
 	text-transform: uppercase;
 	font-weight: bold;
+	float:left;
 	color: #ffffff;
 	cursor: pointer;
 	background: #f29691;
@@ -455,9 +448,11 @@ height:100%padding-bottom:88px;
 }
 .blueBg ul li {
 	float: left;
-	width: 20%;
+	width: 25%;
 	text-align: center;
-	margin-right: 65px;
+}
+.boxWrap {
+	padding:20px;
 }
 .blueBg ul li img {
 	width: 70%;
@@ -538,15 +533,39 @@ height:100%padding-bottom:88px;
 .mobilemenu { position: absolute; top: 100px; left: -300px; background: #f00; width: 300px; height: 100%; }
 */
 
-.mobile-navBox { position: fixed; left: -260px; top: 0px; height: 100%; z-index: 9999; display: none; }
+.mobile-navBox { 
+	position: fixed;
+	left: 0;
+	top: 49px;
+	height: auto;
+	z-index: 9999;
+	display: none;
+	width: 100%;
+}
+.mobilemenu {
+	background: #ffffff;
+}
 
-.mobilemenu {  background: #ffffff; float: left; width: 260px; height: auto; border-bottom: 1px solid #b1b9cd; }
-.mobilemenu ul { padding: 5px;}
+.mobilemenu ul {
+	padding:0;
+	margin:0;
+}
 .mobilemenu ul li { font-size: 25px; border-bottom: 1px solid #b1b9cd; }
 .mobilemenu ul li:last-child { border-bottom: none; }
 .mobilemenu ul li a { padding: 10px; display: block; color: #606e8e; }
 
-.mobile-icon {margin-left: 10px; margin-top: 8px; width: 40px; height: 40px; display: block; text-indent: -9999px; cursor: pointer; float: right; background: url(../images/menu-icon.png) left top no-repeat; }
+.mobile-icon {
+	top: 0px;
+	margin-left: 10px;
+	margin-top: 8px;
+	width: 40px;
+	height: 40px;
+	text-indent: -9999px;
+	position: fixed;
+	z-index: 10001;
+	cursor: pointer;
+	background: url(../images/menu-icon.png) left top no-repeat;
+}
 
 .videopopup{ position: fixed; left: 0px; top: 0px; width: 100%; height: 100%; background: rgba(0, 0, 0, .8); float: left; display: none; z-index: 9999;  }
 .videobox { width: 50%; margin: 8% auto 0 auto;  position: relative;
@@ -594,118 +613,352 @@ height:100%padding-bottom:88px;
 
 /*---- About Us ---*/
 
+@media screen and (max-width: 1280px) {
+	.signupBox {
+		background-size:100% 100%;
+	}
+	.signupBoxWrap .signupContainer, .signupBoxWrap .align {
+		width:50%;
+		float:left;
+	}
+	.signupBox input[type="text"],
+	.signupBox input[type="submit"] {
+		-webkit-appearance:none;
+		appearance:none;
+		box-sizing:border-box;
+		-webkit-box-sizing:border-box;
+		-moz-box-sizing:border-box;
+		-ms-box-sizing:border-box;
+		-o-box-sizing:border-box;
+	}
+	.signupBox fieldset {
+		float:none;
+	}
+	.signupBox input[type="text"] {
+		width:60%;
+		float:left;
+	}
+	.signupBox input[type="submit"] {
+		width:39%;
+		float:left;
+		font-size: 17px;
+	}
+	.signupBox a.watchvideo {
+		font-size:20px;
+	}
+	
+	.mobileBox {
+		width: 300px;
+		height: 600px;
+		background-size: 100%;
+	}
+	.mobileBox .mobileSwiper {
+		margin: 103px auto 0 auto;
+		max-width: 225px;
+	}	
+	
+}
+
+@media screen and (min-width: 769px) and (max-width: 1280px) {
+	.signupBox {
+		width:60%;
+		margin: 12% 0;
+		background-size:100% 100%;
+	}
+	.signupBoxWrap {
+		margin: 12% 7%;
+	}
+	.signupBoxWrap p {
+		font-size: 36px;
+		line-height: 36px;
+	}
+	.signupBoxWrap h1 {
+		background-size: 85%;
+		height: 54px;
+	}
+	.blueBg {
+		padding:0;
+	}
+	.blueBg ul li {
+		margin: 8% 0;
+	}
+	.blueBg ul li p {
+		font-size:35px;
+		line-height:35px;
+	}
+	.yourScore {
+		padding: 0;
+	}
+	.yourScore .widthWrapper {
+		margin:8% auto;
+	}
+	.yourScore p {
+		font-size: 28px;
+		line-height: 28px;
+	}
+	.yourScoreContainer {
+		padding-bottom:40px;
+	}
+	
+	.mobileBox {
+	}
+}
+
+@media screen and (min-width: 769px) and (max-width: 959px) {
+	header .logo {
+		width: 170px;
+		height: 85px;
+		top: 40px;
+		margin-left: -85px;
+	}
+	header .logo a {
+		width: 170px;
+		background-size:100%;
+		height: 85px;
+	}
+	.signupBoxWrap h1 {
+		background-size: 80%;
+		height: 44px;
+		width: 326px;
+	}
+	.signupBoxWrap p {
+		font-size: 30px;
+		line-height: 30px;
+	}
+	.signupBox a.watchvideo {
+		font-size: 17px;
+		padding-right: 47px;
+	}
+	.signupBox input[type="submit"] {
+		font-size: 14px;
+	}
+	.blueBg ul li {
+		margin: 4% 0;
+	}
+	.blueBg ul li p {
+		font-size: 28px;
+		line-height: 28px;
+	}
+	.mobileBox {
+		width: 230px;
+		height: 470px;
+		background-size: 100%;
+	}
+	.mobileBox .mobileSwiper {
+		margin: 85px auto 0 auto;
+		max-width: 171px;
+	}
+}
+
+@media screen and (max-width: 768px) {
+	header .logo {
+		width: 170px;
+		height: 85px;
+		top: 40px;
+		margin-left: -85px;
+	}
+	header .logo a {
+		width: 170px;
+		background-size:100%;
+		height: 85px;
+	}
+	.mobileBox {
+		float: none;
+		margin: 0 auto 30px;
+		padding: 1px;
+	}
+	.blueBg {
+		padding: 0;
+	}
+	.blueBg ul li img {
+		width: 75%;
+	}
+	.blueBg ul li {
+		margin: 8% 0;
+	}
+	.blueBg ul li p {
+		font-size: 20px;
+		line-height: 20px;
+	}
+	.yourScore {
+		padding: 0;
+	}
+	.yourScore .widthWrapper {
+		margin:8% auto;
+	}
+	.yourScoreContainer {
+		padding-bottom:50px;
+	}
+	.signupBox {
+		width: 95%;
+		float: none;
+		margin: 70px 0 35px;
+		padding: 1px;
+	}
+	.signupBox h1 {
+		background-size: 100%;
+		width: 290px;
+		height: 47px;
+	}
+	.signupBox p {
+		font-size:38px;
+		line-height:38px;
+	}
+	.signupBoxWrap {	
+		margin: 8% 10% 8% 6%;
+	}
+	.contentCntr {
+		padding-top: 78px;
+	}
+	.widthWrapper {
+		padding:1px;
+	}
+}
+@media screen and (max-width: 640px) {
+	header .logo {
+		width: 130px;
+		height: 66px;
+		top: 15px;
+		margin-left: -65px;
+	}
+	header .logo a {
+		width: 130px;
+		background-size: 100%;
+		height: 67px;
+	}
+	.contentCntr {
+		padding-top: 48px;
+	}
+	.blueBg ul li p {
+		font-size: 12px;
+		line-height: 13px;
+		margin: 10px 0;
+	}
+	.boxWrap {
+		padding: 8px;
+	}
+	.yourScore p {
+		font-size: 20px;
+		margin: 13px auto;
+		line-height: 20px;
+		width: 84%;
+	}
+	.signupBox h1 {
+		background-size: 100%;
+		width: 220px;
+		height: 38px;
+	}
+	.signupBox p {
+		font-size: 28px;
+		line-height: 28px;
+	}
+	.signupBox input[type="submit"] {
+		font-size: 15px;
+		padding: 5px;
+	}
+	.signupBox a.watchvideo {
+		font-size: 16px;
+		padding-right: 40px;
+	}
+	footer {
+		padding: 13px 0px 0;
+	}
+	footer p {
+		float: none;
+		text-align: center;
+		font-size: 10px;
+	}
+	footer ul {
+		text-align:center;
+		float:none;
+	}
+	footer ul li {
+		float: none;
+		display: inline-block;
+		padding: 0 20px;
+		font-size: 12px;
+		margin: 10px 0;
+	}
+	
+}
+
+@media screen and (max-width: 480px) {
+	
+	.mobileBox {
+		width: 240px;
+		height: 450px;
+	}
+	.mobileBox .mobileSwiper {
+		margin: 67px auto 0 auto;
+		max-width: 180px;
+	}
+	.blueBg ul li p {
+		font-size: 11px;
+		line-height: 13px;
+		margin: 7px 0;
+	}
+	.boxWrap {
+		padding: 8px;
+	}
+	.yourScore p {
+		font-size: 16px;
+		margin: 14px auto;
+		line-height: 16px;
+		width: 84%;
+	}
+	
+
+	.signupBox h1 {
+		background-size: 100%;
+		width: 200px;
+		height: 32px;
+	}
+	.signupBox p {
+		font-size: 19px;
+		line-height: 19px;
+	}
+	.signupBoxWrap .signupContainer, 
+	.signupBoxWrap .align {
+		width: 90%;
+		float: none;
+		margin:0;
+	}
+	.signupBox a.watchvideo {
+		font-size: 18px;
+		margin: 8px 0 0;
+	}
+	.yourScoreContainer {
+		margin:0 20px;
+	}
+	.yourScoreContainer input[type="text"] {
+		width:60%;
+		box-sizing:border-box;
+		-webkit-box-sizing:border-box;
+		-moz-box-sizing:border-box;
+		-ms-box-sizing:border-box;
+		-o-box-sizing:border-box;	
+	}
+	.yourScoreContainer input[type="submit"] {
+		font-size:17px;
+		width:40%;		
+		box-sizing:border-box;
+		-webkit-box-sizing:border-box;
+		-moz-box-sizing:border-box;
+		-ms-box-sizing:border-box;
+		-o-box-sizing:border-box;
+	}
+	.yourScore .abs {
+		width:auto;
+		max-width:309px;
+	}
+}
 
 
 
  @media screen and (min-width: 768px) and (max-width: 959px) {
-.contentCntr {
-	height: 470px;
-}
-.mobileBox {
-	background-size: 92%;
- 	padding: 17px 23px 10px 41px;
-	width: 142px;
-	height: auto;
-	margin: 8% 9% 5% 0;
-}
-.mobileBox figure {
-	margin: 54px auto;
-	max-width: 254px;
-	height: auto;
-}
-.signupBox {
-	width: 60%;
-	background-size: 100%;
-	padding: 0px 0px 7% 3%;
-	margin: 15% 0px 0px 0px;
-}
-.signup_blue_box {
-	padding: 8% 0 14% 3%;
-	width: 60%;
-	background-size: 85%;
-	margin: 15% 0px 0px 0px;
-}
-.signupBox p {
-	font-size: 24px;
-	line-height: 24px;
-}
-.signup_blue_box h3 { 
-	font-size: 24px;
-	line-height: 24px;
-}
-.signupBox h1, .signup_blue_box h1 {
-	margin: 8% 0px 1% 0;
-	width: 87%;
-	height: auto;
-	background-size: 82%;
-}
-.signupBox input[type="text"], .signup_blue_box input[type="text"] {
-	width: 50%;
-	line-height: 24px;
-}
-.signupBox input[type="submit"], .signup_blue_box input[type="submit"] {
-	padding: 5px;
-	line-height: 24px;
-	font-size: 20px;
-}
-.signupBox fieldset, .signup_blue_box fieldset {
-	padding-top: 1%;
-}
-.signupBox a.watchvideo {
-	padding: 0px 36px 0px 12px;
-	line-height: 34px;
-	margin: 6px 0px 0px 0px;
-	font-size: 17px;
-}
-header .logo a {
-	background-size: 70%;
-}
-header .logo {
-	width: 21%;
-	top: 40px;
-}
+
 .thankyou {
 	font-size: 17px;
-}
-.blueBg ul li p {
-	font-size: 26px;
-	line-height: 25px;
-}
-.blueBg ul li {
-	margin: 0 20px;
-}
-.yourScore {
-	padding: 100px 0;
-	background-color: #fff;
-}
-.yourScore h1 {
-	font-size: 57px;
-}
-.yourScore p {
-	font-size: 20px;
-	line-height: 20px;
-	width: 57%;
-}
-.yourScore img {
-	width: 70%;
-}
-.yourScoreContainer input[type="submit"] {
-	padding: 5px;
-	line-height: 26px;
-	font-size: 14px;
-}
-.yourScoreContainer input[type="text"] {
-	padding: 5px;
-	line-height: 26px;
-	font-size: 14px;
-	width: 160px;
-}
-#bouncy a {
-	margin: -5px auto;
-	height: 25px;
-}
-.yourScore .abs {
-	width: 232px;
 }
 .teamName p {
 	color: #4d4d4d;
@@ -720,119 +973,10 @@ header .logo {
 .teamContainer { width: 90%; }
 .teamHiring { width: 95%; }
 }
+
  @media screen and (min-width: 641px) and (max-width: 767px) {
-.contentCntr {
-	height: 470px;
-	margin-top: 78px;
-}
-.mobileBox {
-	background-size: 92%;
-	 padding: 17px 23px 10px 41px;
-	width: 142px;
-	height: auto;
-	margin: 8% 5% 5% 0;
-}
-.mobileBox figure {
-	margin: 54px auto;
-	max-width: 254px;
-	height: auto;
-}
-.signupBox {
-	width: 60%;
-	background-size: 100%;
-	padding: 0px 0px 7% 3%;
-	margin: 15% 0px 0px 0px;
-}
-.signup_blue_box {
-	padding: 8% 0 14% 3%;
-	width: 60%;
-	background-size: 100%;
-	margin: 15% 0px 0px 0px;
-}
-.signupBox p, .signup_blue_box p {
-	font-size: 24px;
-	line-height: 24px;
-}
-.signupBox h1 {
-	margin: 6% 0px 1% 0;
-	width: 87%;
-	line-height: 45px;
-	background-size: 82%;
-	height: 50px;
-}
-.signup_blue_box h1 {
-	margin: 8% 0px 1% 0;
-	width: 87%;
-	height: auto;
-}
-.signupBox input[type="text"], .signup_blue_box input[type="text"] {
-	width: 50%;
-	line-height: 24px;
-	width: 45%;
-}
-.signupBox input[type="submit"], .signup_blue_box input[type="submit"] {
-	padding: 5px;
-	line-height: 24px;
-	font-size: 14px;
-}
-.signupBox fieldset, .signup_blue_box fieldset {
-	padding-top: 1%;
-}
-.signupBox a.watchvideo {
-	padding: 0px 36px 0px 12px;
-	line-height: 34px;
-	margin: 6px 0px 0px 0px;
-	font-size: 17px;
-}
-header .logo a {
-	background-size: 70%;
-}
-header .logo {
-	width: 21%;
-	top: 40px;
-}
 .thankyou {
 	font-size: 17px;
-}
-.blueBg ul li p {
-	font-size: 19px;
-	line-height: 20px;
-}
-.blueBg ul li {
-	margin: 0 15px;
-}
-.yourScore {
-	padding: 100px 0;
-}
-.yourScore .abs {
-	width: 232px;
-}
-.yourScore h1 {
-	font-size: 57px;
-}
-.yourScore p {
-	font-size: 20px;
-	line-height: 23px;
-	width: 68%;
-	margin: 15px auto;
-}
-.yourScore img {
-	width: 86%;
-}
-.yourScoreContainer input[type="submit"] {
-	padding: 5px;
-	line-height: 26px;
-	font-size: 14px;
-}
-.yourScoreContainer input[type="text"] {
-	padding: 5px;
-	line-height: 26px;
-	font-size: 14px;
-	width: 160px;
-}
-#bouncy a {
-	margin: -5px auto;
-	height: 25px;
 }
 nav {
 	width: 180px;
@@ -842,9 +986,6 @@ nav {
 }
 nav ul {
 	padding: 15px 0px;
-}
-#abs {
-	width: 40%;
 }
 .teamName p {
 	color: #4d4d4d;
@@ -859,154 +1000,11 @@ nav ul {
 .teamContainer { width: 85%; }
 .teamHiring { width: 95%; }
 }
- @media screen and (min-width: 320px) and (max-width: 640px) {
 
-.mobile-navBox { display: block; }
-footer ul { display: none;}
-.contentCntr {
-	height: 600px;
-	margin-top: 49px;
-}
-.mobileBox {
-	background-size: 100% auto;
-	padding: 29px 13px 25px 12px;
-	width: 84px;
-	height: auto;
-	margin: 35px auto 0;
-	float: none;
-}
-.mobileBox figure {
-	margin: 0 auto;
-	max-width: 254px;
-	height: auto;
-}
-.signupBox {
-	width: 100%;
-	background-size: 100%;
-	padding: 4px 0;
-	margin: 5px 0px 0px 0px;
-	background-image: none;
-	background-color: #1e283d;
-	float: none;
-	background-position: center;
-	text-align: center;
-	height: 146px;
-	;
-}
-.signup_blue_box {
-	width: 100%;
-	background-size: 100%;
-	padding: 15px 0;
-	margin: 5px 0px 0px 0px;
-	background-image: none;
-	background-color: #05b2c8;
-	float: none;
-	background-position: center;
-	text-align: center;
-	height: 90px;
-	
-}
+@media screen and (min-width: 320px) and (max-width: 640px) {
 
-.signupBox p {
-	font-size: 17px;
-	line-height: 15px;
-	width: 65%;
-	margin: 5px auto;
-}
-.signup_blue_box h3 { 
-	font-size: 23px;
-	line-height: 22px;
-}
-.signupBox h1 {
-	margin: 0 auto;
-	width: 50%;
-	line-height: auto;
-	background-size: 60% auto;
-	height: auto;
-	font-size: 22px;
-	background-position: center;
-}
-.signupContainer {
-	display: table;
-	margin: 0 auto;
-}
-.signup_blue_box h1 {
-	margin: 8% 0px 1% 0;
-	width: 87%;
-	height: auto;
-}
-.signupBox input[type="text"], .signup_blue_box input[type="text"] {
-	width: 50%;
-	line-height: 20px;
-	width: 148px;
-}
-.signupBox input[type="submit"], .signup_blue_box input[type="submit"] {
-	padding: 5px;
-	line-height: 20px;
-	font-size: 14px;
-}
-.signupBox fieldset, .signup_blue_box fieldset {
-	padding-top: 1%;
-}
-.signupBox a.watchvideo {
-	padding: 0px 36px 0px 12px;
-	line-height: 34px;
-	margin: 6px 0px 0px 0px;
-	font-size: 17px;
-}
-header .logo a {
-	background-size: 70%;
-}
-header .logo {
-	width: 21%;
-	top: 40px;
-	left: 59%;
-}
 .thankyou {
 	font-size: 17px;
-}
-.blueBg ul li p {
-	font-size: 19px;
-	line-height: 20px;
-}
-.blueBg ul li {
-	margin: 0 15px;
-}
-.yourScore {
-	padding: 100px 0;
-}
-.yourScore .abs {
-	width: 232px;
-}
-.yourScore h1 {
-	font-size: 57px;
-}
-.yourScore p {
-	font-size: 20px;
-	line-height: 23px;
-	width: 68%;
-	margin: 15px auto;
-}
-.yourScore img {
-	width: 86%;
-}
-.yourScoreContainer input[type="submit"] {
-	padding: 5px;
-	line-height: 26px;
-	font-size: 14px;
-}
-.yourScoreContainer input[type="text"] {
-	padding: 5px;
-	line-height: 26px;
-	font-size: 14px;
-	width: 160px;
-}
-#bouncy {
-	margin: 5px auto;
-}
-#bouncy a {
-	margin: 0 auto;
-	height: 20px;
 }
 nav {
 	width: 180px;
@@ -1017,29 +1015,11 @@ nav {
 nav ul {
 	padding: 15px 0px;
 }
-#abs {
-	width: 40%;
-}
 nav, .sociableBox {
 	display: none;
 }
 header {
 	min-height: 50px;
-}
-header .logo {
-	left: 62%;
-	top: 5px;
-}
-header .logo a {
-	height: 80px;
-	background-size: 60% auto;
-}
-#abs {
-	width: 230px;
-}
-.blueBg ul li {
-	width: 40%;
-	margin-bottom: 30px;
 }
 .signupContainer1 {
 display: table;
@@ -1067,4 +1047,8 @@ margin: 0 auto;
 	width: 86%;
 	border-radius: 10px;
 } 
+}
+
+.swiper-slide {
+	height: auto !important;
 }

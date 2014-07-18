@@ -203,10 +203,8 @@ nav ul li a:hover {
 /* content container start */
 .contentCntr {
 	margin-top: 80px;
-	overflow: hidden;
 	background: url("../images/background.png") no-repeat scroll center top / cover rgba(0, 0, 0, 0);
 	background-size: cover;
-	height: 700px;
 }
 /* content container end */
 

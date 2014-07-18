@@ -7,8 +7,9 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
 	<title>Clickin</title>
 	<link href="css/style.css" type="text/css" rel="stylesheet">
+	<link href="css/idangerous.swiper.css" type="text/css" rel="stylesheet">
+  
 	<script src="js/jquery-1.11.0.min.js"></script>
-	<script type="text/javascript" src="js/index.js"></script>
 	<script src="js/common.js"></script>
 	<script type="text/javascript" src="js/jquery.fancybox.min.js"></script>
 	<script type="text/javascript" src="js/mixpanel.js"></script>
@@ -19,7 +20,9 @@
 	<?php unset($_POST['m']); } ?>
 </head>
 <body>
-<!-- mobile menu start -->
+
+<div class="mobile-icon">menu icon</div>
+
 <div class="mobile-navBox">
   <div class="mobilemenu">
     <ul>
@@ -30,7 +33,6 @@
       <li><a href="https://twitter.com/ClickinApp" target="_blank" class="twitter">twitter</a></li>
     </ul>
   </div>
-  <div class="mobile-icon">menu icon</div>
 </div>
 <!-- mobile menu end --> 
 
@@ -42,25 +44,20 @@
   <div class="close">close</div>
 </div>
 <!-- popup end --> 
-<!-- container start -->
+
 <div class="wrapperBox"> 
   
-  <!-- header start -->
   <header>
     <div class="center"> 
       
-      <!-- logo start -->
-      <div class="logo"> <a href="">Clickin</a> </div>
-      <!-- logo end --> 
-      
-      <!-- nav start -->
+      <div class="logo"><a href="index.php">Clickin</a></div>
+
       <nav class="hide">
         <ul>
           <li><a href="about.html">About</a></li>
           <li><a href="#">Contact</a></li>
         </ul>
       </nav>
-      <!-- nav end --> 
       
       <!-- sociable start -->
       <div class="sociableBox">
@@ -81,170 +78,100 @@
       
     </div>
   </header>
-  <!-- header end --> 
-  
-  <!-- content article start -->
+
   <article class="contentCntr">
 
-      <div class="content stick" id="content1"> 
+      <div class="mobileFrame"> 
+        <div class="widthWrapper">
         
-        <!-- mobile box start -->
-        <section class="mobileBox">
-          <figure> <img id="originalImage" src="images/screen1.jpg" alt="clickin"> <img id="revertImage" src="images/signup_mobile_img.png" alt="clickin"> </figure>
-        </section>
-        <!-- mobile box end --> 
-        
-        <!-- signup box start -->
-        <section class="signupBox">
-          <h1>Clickin</h1>
-          <p>IS THE SIMPLEST AND FASTEST <br>
-            WAY TO EXPRESS YOURSELF</p>
-          <form method="POST" action=""> 
-            <div class="signupContainer">
-              <fieldset id="abs">
-                <input type="text" placeholder="Enter email" name="email"/>
-                <input type="hidden" name="m" value="1" />
-                <input class="submit" type="submit" value="sign up" />
-              </fieldset>
-            </div>
-            <span class="align"><a href="#" class="watchvideo">Watch Video</a></span>
-          </form>
-        </section>
-        <!-- signup box end -->
-        <div class="clear"></div>
-      </div>
-      <div class="content stick" id="content2"> 
-        
-        <!-- mobile box start -->
-        <section class="mobileBox">
-          <figure> <img src="images/screen2.png" alt="clickin"> </figure>
-        </section>
-        <!-- mobile box end --> 
-        
-        <!-- signup box start -->
-        <section class="signup_blue_box">
-          <h3>ADD, INVITE OR FIND A PARTNER <br>
-            TO START CLICKIN’ WITH</h3>
-          <form method="POST" action="">
-            <div class="signupContainer1">
-              <fieldset class="abs">
-                <input type="text" placeholder="Enter email" name="email" />
-                <input type="hidden" name="m" value="1" />
-                <input class="submit" type="submit" value="sign up" />
-              </fieldset>
-            </div>
-          </form>
-        </section>
-        <!-- signup box end --> 
-      </div>
-      <div class="content stick" id="content3"> 
-        
-        <!-- mobile box start -->
-        <section class="mobileBox">
-          <figure><img src="images/screen3.png" alt="clickin"> <img id="revertImage" src="images/signup_mobile_img.png" alt="clickin"></figure>
-        </section>
-        <!-- mobile box end --> 
-        
-        <!-- signup box start -->
-        <section class="signup_blue_box">
-          <h3>DRAG THE CLICKER TO GIVE OR<br>
-            TAKE POINTS FROM ONE ANOTHER</h3>
-          <form method="POST" action="">
-            <div class="signupContainer1">
-              <fieldset class="abs">
-                <input type="text" placeholder="Enter email" name="email" />
-                <input type="hidden" name="m" value="1" />
-                <input class="submit" type="submit" value="sign up" />
-              </fieldset>
-            </div>
-          </form>
-        </section>
-        <!-- signup box end --> 
-      </div>
-      <div class="content stick" id="content4"> 
-        
-        <!-- mobile box start -->
-        <section class="mobileBox">
-          <figure><img src="images/screen4.png" alt="clickin"> <img id="revertImage" src="images/signup_mobile_img.png" alt="clickin"></figure>
-        </section>
-        <!-- mobile box end --> 
-        
-        <!-- signup box start -->
-        <section class="signup_blue_box">
-          <h3>DRAG THE CLICKER TO GIVE OR<br>
-            TAKE POINTS FROM ONE ANOTHER</h3>
-          <form method="POST" action="">
-            <div class="signupContainer1">
-              <fieldset class="abs">
-                <input type="text" placeholder="Enter email" name="email"/>
-                <input type="hidden" name="m" value="1" />
-                <input class="submit" type="submit" value="sign up" />
-              </fieldset>
-            </div>
-          </form>
-        </section>
-        <!-- signup box end --> 
-      </div>
-      <div class="content stick" id="content5"> 
-        
-        <!-- mobile box start -->
-        <section class="mobileBox">
-          <figure><img src="images/screen5.png" alt="clickin"> <img id="revertImage" src="images/signup_mobile_img.png" alt="clickin"></figure>
-        </section>
-        <!-- mobile box end --> 
-        
-        <!-- signup box start -->
-        <section class="signup_blue_box">
-          <p>DRAG THE CLICKER TO GIVE OR<br>
-            TAKE POINTS FROM ONE ANOTHER</p>
-          <form method="POST" action="">
-            <div class="signupContainer1">
-              <fieldset class="abs">
-                <input type="text" placeholder="Enter email" name="email"/>
-                <input type="hidden" name="m" value="1" />
-                <input class="submit" type="submit" value="sign up" />
-              </fieldset>
-            </div>
-          </form>
-        </section>
-        <!-- signup box end --> 
-      </div>
-            <!--Start blueBg-->
-      <div class="blueBg content" id="content6">
-        <ul>
-          <li> <img src="images/img1.png" alt=""/>
-            <p>ADD MULTIPLE PARTNERS</p>
-          </li>
-          <li> <img src="images/img2.png" alt=""/>
-            <p>CONTROL RELATIONSHIP VISIBILITY</p>
-          </li>
-          <li> <img src="images/img3.png" alt=""/>
-            <p>HANDPICK YOUR FOLLOWERS</p>
-          </li>
-          <li> <img src="images/img4.png" alt=""/>
-            <p>SEARCH AND DISCOVER CLICKERS</p>
-          </li>
+          <section class="signupBox">
+          	<div class="signupBoxWrap">
+              <h1>Clickin</h1>
+              <p>IS THE SIMPLEST AND FASTEST <br>
+                WAY TO EXPRESS YOURSELF</p>
+              <form method="POST" action=""> 
+                <div class="signupContainer">
+                  <fieldset id="abs">
+                    <input type="text" placeholder="Enter email" name="email"/>
+                    <input type="hidden" name="m" value="1" />
+                    <input class="submit" type="submit" value="sign up" />
+                  </fieldset>
+                </div>
+                <span class="align"><a href="#" class="watchvideo">Watch Video</a></span>
+              </form>
+              <div class="clear"></div>
+            </div><!-- .signupBoxWrap -->
+          </section><!-- .signupBox -->
+
+          <section class="mobileBox">
+            <div class="mobileSwiper">
+            	<div class="swiper-container">
+              	<div class="swiper-wrapper">
+                	<div class="swiper-slide"><img src="images/img-1.jpg" alt="clickin"></div>
+                	<div class="swiper-slide"><img src="images/img-2.jpg" alt="clickin"></div>
+                	<div class="swiper-slide"><img src="images/img-3.jpg" alt="clickin"></div>
+                	<div class="swiper-slide"><img src="images/img-4.jpg" alt="clickin"></div>
+                	<div class="swiper-slide"><img src="images/img-5.jpg" alt="clickin"></div>
+                	<div class="swiper-slide"><img src="images/img-6.jpg" alt="clickin"></div>
+                </div><!-- .swiper-wrapper -->
+              </div><!-- .swiper-container -->
+            	
+            </div><!-- .mobileSwiper -->
+          </section><!-- .mobileBox -->
+
+        	<div class="clear"></div>
+        </div><!-- .widthWrapper -->
+      </div><!-- .mobileFrame -->
+      
+      <div class="blueBg">
+        <div class="widthWrapper">
+          <ul>
+            <li>
+            	<div class="boxWrap">
+                <p><img src="images/img1.png" alt=""/></p>
+                <p>ADD MULTIPLE PARTNERS</p>
+            	</div><!-- .boxWrap -->
+            </li>
+            <li>
+            	<div class="boxWrap">
+                <p><img src="images/img2.png" alt=""/></p>
+                <p>CONTROL RELATIONSHIP VISIBILITY</p>
+            	</div><!-- .boxWrap -->
+            </li>
+            <li>
+            	<div class="boxWrap">
+                <p><img src="images/img3.png" alt=""/>
+              	<p>HANDPICK YOUR FOLLOWERS</p>
+            	</div><!-- .boxWrap -->
+            </li>
+            <li>
+            	<div class="boxWrap">
+                <p><img src="images/img4.png" alt=""/>
+              	<p>SEARCH AND DISCOVER CLICKERS</p>
+            	</div><!-- .boxWrap -->
+            </li>
+          </ul>
           <div class="clear"></div>
-        </ul>
-      </div>
-      <!--End blueBg-->
-			<div class="yourScore content" id="content7"> <img src="images/your-score.png" alt=""/>
-      <p>Be it a loyal lover, a casual fling or someone you just met Clickin' is for those who share a connection or want to.</p>
-      <div class="yourScoreContainer">
-		<form method="POST" action="">  
-			<fieldset class="abs">
-			  <input type="text" placeholder="Enter email" name="email" class="email" />
-			  <input type="hidden" name="m" value="1" />
-			  <input class="submit" type="submit" value="sign up" />
-			</fieldset>
-        </form>
-      </div>
-    </div>      
-      <div id="bouncy"><a class="next" href="#"></a></div>
+        </div><!-- .widthWrapper -->
+      </div><!-- .blueBg -->
+
+			<div class="yourScore">
+        <div class="widthWrapper">
+          <img src="images/your-score.png" alt=""/>
+          <p>Be it a loyal lover, a casual fling or someone you just met Clickin' is for those who share a connection or want to.</p>
+          <div class="yourScoreContainer">
+            <form method="POST" action="">  
+              <fieldset class="abs">
+                <input type="text" placeholder="Enter email" name="email" class="email" />
+                <input type="hidden" name="m" value="1" />
+                <input class="submit" type="submit" value="sign up" />
+              </fieldset>
+            </form>
+          </div><!-- yourScoreContainer - Form -->
+        </div><!-- .widthWrapper -->
+    </div><!-- .yourScore -->      
   </article>
-  <!-- content article end --> 
  
-  <!-- footer start -->
   <footer>
     <div class="center">
       <p>Clickin Technologies Ltd. 2014 </p>
@@ -255,8 +182,20 @@
       </ul>
     </div>
   </footer>
-  <!-- footer end --> 
-</div>
-<!-- container end -->
+
+</div><!-- .wrapperBox -->
+
+
+  <script src="js/idangerous.swiper-2.1.min.js"></script>
+  <script>
+		var mySwiper = new Swiper('.swiper-container',{
+			loop:true,
+			autoplay:4000,
+			speed:500,
+			grabCursor: true,
+			paginationClickable: true
+		})
+  </script>
+  
 </body>
 </html>
