@@ -555,6 +555,7 @@ footer ul li a {
 .mobilemenu ul li a { padding: 10px; display: block; color: #606e8e; }
 
 .mobile-icon {
+	display:none;
 	top: 0px;
 	margin-left: 10px;
 	margin-top: 8px;
@@ -815,6 +816,9 @@ footer ul li a {
 	}
 }
 @media screen and (max-width: 640px) {
+	.mobile-icon {
+		display:block;
+	}
 	header .logo {
 		width: 130px;
 		height: 66px;
