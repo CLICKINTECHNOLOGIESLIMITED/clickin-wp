@@ -1,84 +1,67 @@
 <!doctype html>
 <html>
 <head>
-<meta charset="utf-8">
-<meta name="SKYPE_TOOLBAR" content="SKYPE_TOOLBAR_PARSER_COMPATIBLE" />
-<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-<title>Clickin</title>
-<link href="css/style.css" type="text/css" rel="stylesheet">
-<script src="js/jquery-1.11.0.min.js"></script>
-<script src="js/common.js"></script>
-<script type="text/javascript" src="js/jquery.fancybox.min.js"></script>
+  <meta charset="utf-8">
+  <meta name="SKYPE_TOOLBAR" content="SKYPE_TOOLBAR_PARSER_COMPATIBLE" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Clickin | About Us</title>
+	<link rel="shortcut icon" href="favicon.ico" type="image/x-icon"/>
+  <link href="css/style.css" type="text/css" rel="stylesheet">
+	<script src="js/jquery-1.11.0.min.js"></script>
+  <script type="text/javascript" src="js/jquery.fancybox.min.js"></script>
+  <script type="text/javascript" src="js/scripts.js"></script>
 </head>
 
 <body>
+<div class="mobile-icon">Menu</div>
 
-	<div class="mobile-icon">menu icon</div>
-      
-	<div class="mobile-navBox">
-		
-		<div class="mobilemenu">
-			<ul>
-				<li><a href="about.html">About</a></li>
-				<li><a href="#">Contact</a></li>
-				<li><a href="http://clickinkeepscoring.tumblr.com/" target="_blank" >Blog</a></li>
-				<li><a href="https://www.facebook.com/pages/Clickin-Keep-Scoring/627229503987907" target="_blank" class="facebook">facebook</a></li>
-				<li><a href="https://twitter.com/ClickinApp" target="_blank" class="twitter">twitter</a></li>
-			</ul>
-		</div>
-	</div>
-	<!-- mobile menu end -->
-	
-	<!-- popup start -->
-	<div class="videopopup">
-	
-	<div class="videobox"><iframe src="http://www.youtube.com/embed/XGSy3_Czz8k"> 	</iframe>
-	
-	
-	</div>
-	<div class="close">close</div>
-	
-	</div>
-	<!-- popup end -->
+<div class="mobile-navBox">
+  <div class="mobilemenu">
+    <ul>
+      <li><a href="about.html" title="About Us">About</a></li>
+      <li><a href="contact.html" title="Contact Us">Contact</a></li>
+      <li><a href="http://clickinkeepscoring.tumblr.com/" target="_blank" title="Blog">Blog</a></li>
+      <li><a href="https://twitter.com/ClickinApp" title="Twitter" target="_blank" class="facebook">Twitter</a></li>
+      <li><a href="https://www.facebook.com/pages/Clickin-Keep-Scoring/627229503987907" target="_blank" class="twitter" title="Facebook">Facebook</a></li>
+    </ul>
+  </div>
+</div>
 
+<div class="videopopup">
+  <div class="videobox">
+	  <div class="close">close</div>
+    <iframe src="http://www.youtube.com/embed/XGSy3_Czz8k"> </iframe>
+  </div>
+</div>
 
-<!-- container start -->
 <div class="wrapperBox"> 
   
-  <!-- header start -->
   <header>
     <div class="center"> 
-      
-      <!-- logo start -->
-      <div class="logo"> <a href="index.php">Clickin</a> </div>
-      <!-- logo end --> 
-      
-      <!-- nav start -->
+      <div class="logo"><a href="index.php" title="Clickin">Clickin</a></div>
       <nav class="hide">
         <ul>
-          <li><a href="about.html">About</a></li>
-          <li><a href="#">Contact</a></li>
+          <li><a href="about.html" title="About Us" class="activeLink">About</a></li>
+          <li><a href="contact.html" title="Contact Us">Contact</a></li>
         </ul>
       </nav>
-      <!-- nav end --> 
       
-      <!-- sociable start -->
       <div class="sociableBox">
         <ul>
-          <li><a href="http://clickinkeepscoring.tumblr.com/" target="_blank" >Blog</a></li>
-          <li><a href="https://www.facebook.com/pages/Clickin-Keep-Scoring/627229503987907" target="_blank" class="facebook">facebook</a></li>
-          <li class="gap"><a href="https://twitter.com/ClickinApp" target="_blank" class="twitter">twitter</a></li>
+          <li><a href="http://clickinkeepscoring.tumblr.com/" target="_blank" title="Blog">Blog</a></li>
+          <li><a href="https://twitter.com/ClickinApp" target="_blank" class="facebook" title="Twitter">Twitter</a></li>
+          <li class="gap"><a href="https://www.facebook.com/pages/Clickin-Keep-Scoring/627229503987907" target="_blank" class="twitter" title="Facebook">Facebook</a></li>
           <li id="disableEmail">
-            <input type="text" placeholder="Enter email" />
-            <input class="submit" type="submit" value="sign up" />
+            <form method="POST" action="index.php">  
+              <input type="text" placeholder="Enter email" name="email" />
+              <input type="hidden" name="m" value="1" />
+              <input class="submit" type="submit" value="sign up" />
+            </form>	
           </li>
         </ul>
       </div>
-      <!-- sociable end --> 
-      
     </div>
   </header>
-  <!-- header end --> 
   
   <!-- content article start -->
   	<article class="aboutBg">
@@ -87,7 +70,7 @@
       	<!-- Team Container start --->
         <section class="teamContainer">
         	<div class="teamPic">
-          	<img src="images/image1.png" alt="">
+          	<img src="images/nikhil-mulchandani.png" alt="Nikhil Mulchandani">
           </div>
           <div class="teamName">
           	<h3>Nikhil Mulchandani</h3>
@@ -96,7 +79,7 @@
           </div>
           <div class="clear"></div>
           <div class="teamPic">
-          	<img src="images/image2.png" alt="">
+          	<img src="images/sitara-mulchandani.png" alt="Sitara Mulchandani">
           </div>
           <div class="teamName">
           	<h3>Sitara Mulchandani</h3>
@@ -105,8 +88,8 @@
           </div>
           <div class="clear"></div>
         </section>
-      	<!-- Team Container start --->
-        <section class="teamHiring">
+        
+        <!--<section class="teamHiring">
         	<h2 class="clickinText">We are hiring!!!</h2>
         	<div class="hiring">
           	<div class="teamPic">
@@ -141,72 +124,23 @@
           	</div>
           	<div class="clear"></div>
           </div>   
-        </section>
+        </section>-->
+        
         <div class="clear"></div>
       	</div>
     </article>
   <!--End center-->
     
-  <!-- footer start -->
   <footer>
     <div class="center">
-      <p>Clickin Technologies Ltd. 2014</p>
+      <p>Clickin Technologies Ltd. 2014 </p>
       <ul>
-        <li><a href="#">Faqs</a></li>
-        <li><a href="#">Privacy Policy</a></li>
-        <li><a href="#">Terms of use</a></li>
+        <li><a href="privacy-policy.html">Privacy Policy</a></li>
+        <li><a href="terms-of-use.html">Terms of use</a></li>
       </ul>
     </div>
   </footer>
-  <!-- footer end --> 
- <script>
-$(document).ready(function(){
-	$('.mobile-icon').click(function() {
-		$('.mobile-navBox').slideToggle();
-		
-	});	
-
-})
-</script>
-
-<script>
-		
-			$(document).ready(function(){
-				
-				$(".watchvideo").click(function(){
-					
-					$(".videopopup").show();
-					
-				});
-				
-				$(".close").click(function(){
-					
-					$(".videopopup").hide();
-					
-				})
-				
-				
-			});
-			
-			
-		</script>
- 
- 
- 
-  <script>
-	$(".submit").click(function () {
-   $(".signupContainer,.signupContainer1").html('<span class="thankyou">Thank you for signing up!</span>');
-	 $(".yourScoreContainer").html('<p class="thankyou">Thank you for signing up! We will keep you updated. </p>');
-		 $("#originalImage").hide();
-		 $("#revertImage").show();
-		 $(".submit").attr('disable','true');
-});
-</script> 
-  <script type="text/javascript">
-(function(e,b){if(!b.__SV){var a,f,i,g;window.mixpanel=b;b._i=[];b.init=function(a,e,d){function f(b,h){var a=h.split(".");2==a.length&&(b=b[a[0]],h=a[1]);b[h]=function(){b.push([h].concat(Array.prototype.slice.call(arguments,0)))}}var c=b;"undefined"!==typeof d?c=b[d]=[]:d="mixpanel";c.people=c.people||[];c.toString=function(b){var a="mixpanel";"mixpanel"!==d&&(a+="."+d);b||(a+=" (stub)");return a};c.people.toString=function(){return c.toString(1)+".people (stub)"};i="disable track track_pageview track_links track_forms register register_once alias unregister identify name_tag set_config people.set people.set_once people.increment people.append people.track_charge people.clear_charges people.delete_user".split(" ");for(g=0;g<i.length;g++)f(c,i[g]);b._i.push([a,e,d])};b.__SV=1.2;a=e.createElement("script");a.type="text/javascript";a.async=!0;a.src=("https:"===e.location.protocol?"https:":"http:")+'//cdn.mxpnl.com/libs/mixpanel-2.2.min.js';f=e.getElementsByTagName("script")[0];f.parentNode.insertBefore(a,f)}})(document,window.mixpanel||[]);
-mixpanel.init("a466f516f2adf69b9558cf4c0efc286b");
-</script> 
 </div>
-<!-- container end -->
+
 </body>
 </html>

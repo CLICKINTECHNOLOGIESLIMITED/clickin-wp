@@ -127,9 +127,10 @@ nav ul li a {
 	color: #606e8e;
 	text-decoration: none;
 }
-nav ul li a:hover {
+nav ul li a.activeLink, nav ul li a:hover {
 	color: #ffffff;
 }
+
 /* nav end */
 
 /* sociable start */
@@ -568,12 +569,12 @@ footer ul li a {
 	background: url(../images/menu-icon.png) left top no-repeat;
 }
 
-.videopopup{ position: fixed; left: 0px; top: 0px; width: 100%; height: 100%; background: rgba(0, 0, 0, .8); float: left; display: none; z-index: 9999;  }
+.videopopup{ position: fixed; left: 0px; top: 0px; width: 100%; height: 100%; background: rgba(0, 0, 0, .8); float: left; display: none; z-index: 99999;  }
 .videobox { width: 50%; margin: 8% auto 0 auto;  position: relative;
     padding-bottom: 56.25%; /* 16/9 ratio */
     padding-top: 30px; /* IE6 workaround*/
     height: 0;
-    overflow: hidden;  }
+   }
     
     .videobox iframe,
 .videobox object,
@@ -585,7 +586,7 @@ footer ul li a {
     height: 60%;
 }
 
-.close { position: absolute; top: 20px; right: 20px; height: 52px; width: 52px; display: block; text-indent: -9999px; cursor: pointer; background: url(../images/close.png) left top no-repeat;  }
+.close { position: absolute; top: -28px; right: -28px; z-index:1; height: 52px; width: 52px; display: block; text-indent: -9999px; cursor: pointer; background: url(../images/close.png) left top no-repeat;  }
 
 
 /*----- About Us -----*/
@@ -612,7 +613,73 @@ footer ul li a {
 .hiring { background: url("../images/hiringbg.png") no-repeat scroll 0 0 / 100% auto rgba(0, 0, 0, 0); padding: 20px 7% 20px 20px; margin-bottom: 20px;}
 .teamName {display: table;}
 
-/*---- About Us ---*/
+/* =Centered Page
+----------------------------------------------- */
+.centeredPage {
+	max-width:890px;
+	margin:0 auto;
+	padding:20px;
+	color: #4d4d4d;
+	font-size: 16px;
+	font-weight: normal;
+	line-height: 20px;
+}
+.centeredPage p {
+	color: #4d4d4d;
+	font-size: 16px;
+	font-weight: normal;
+	line-height: 20px;
+	margin:15px 0;
+}
+.centeredPageContent {
+	background:#fff;
+	background-color: #fff;
+	border-radius: 10px;
+	-webkit-border-radius: 10px;
+	-moz-border-radius: 10px;
+	-o-border-radius: 10px;
+	-ms-border-radius: 10px;
+	padding: 30px;
+}
+.pageTitle {
+	font-size: 32px;
+	color: #364566;
+	font-weight: bold;
+	margin-left: 30px;
+	margin-bottom: 15px;
+}
+.centeredPage h3 {
+	font-size: 24px;
+	font-weight: bold;
+	color: #364566;
+	line-height: 25px;
+	margin: 20px 0;
+}
+.centeredPage .textFormat {
+	margin:0 30px 0;
+}
+.centeredPage ul.textFormat {
+	list-style-type:disc;
+}
+.centeredPage ol.textFormat {
+	list-style-type:decimal;
+}
+
+.centeredPage .textFormat li {
+	margin:10px 0;
+}
+.centeredPage strong {
+	font-weight:bold;
+}
+.centeredPage h4 {
+	font-size: 20px;
+	color: #364566;
+	margin: 20px 0 10px;
+}
+.contactPage p {
+	margin:15px 0 25px;
+}
+
 
 @media screen and (max-width: 1280px) {
 	.signupBox {
@@ -868,6 +935,7 @@ footer ul li a {
 		padding: 13px 0px 0;
 	}
 	footer p {
+		margin-right:0;
 		float: none;
 		text-align: center;
 		font-size: 10px;
