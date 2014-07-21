@@ -113,7 +113,7 @@ nav {
 	float: left;
 }
 nav ul {
-	padding: 26px 0px;
+	padding: 34px 0px;
 	list-style: none;
 }
 nav ul li {
@@ -1123,4 +1123,7 @@ margin: 0 auto;
 
 .swiper-slide {
 	height: auto !important;
+}
+.centeredPage a {
+	color:#4d4d4d;
 }
