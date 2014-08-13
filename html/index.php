@@ -27,6 +27,7 @@
   <div class="mobilemenu">
     <ul>
       <li><a href="about.html" title="About Us">About</a></li>
+      <li><a href="jobs.html" title="Jobs">Jobs</a></li>
       <li><a href="contact.html" title="Contact Us">Contact</a></li>
       <li><a href="http://clickinkeepscoring.tumblr.com/" target="_blank" title="Blog">Blog</a></li>
       <li><a href="https://twitter.com/ClickinApp" title="Twitter" target="_blank" class="facebook">Twitter</a></li>
@@ -50,6 +51,7 @@
       <nav class="hide">
         <ul>
           <li><a href="about.html" title="About Us">About</a></li>
+           <li><a href="jobs.html" title="Jobs">Jobs</a></li>
           <li><a href="contact.html" title="Contact Us">Contact</a></li>
         </ul>
       </nav>
@@ -71,7 +73,7 @@
           <section class="signupBox">
           	<div class="signupBoxWrap">
               <h1>Clickin</h1>
-              <p>IS THE SIMPLEST AND FASTEST <br>
+              <p>IS  SIMPLEST AND FASTEST <br>
                 WAY TO EXPRESS YOURSELF</p>
                 <form method="POST" action=""> 
                   <div class="signupContainer">

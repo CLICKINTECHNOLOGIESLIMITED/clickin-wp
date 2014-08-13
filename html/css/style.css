@@ -615,8 +615,8 @@ footer ul li a {
     line-height: 20px;
     margin-top: 20px;
 }
-.teamHiring { float: right; width: 70%; margin-top: 40px; }
-.hiring { background: url("../images/hiringbg.png") no-repeat scroll 0 0 / 100% auto rgba(0, 0, 0, 0); padding: 20px 7% 20px 20px; margin-bottom: 20px;}
+.teamHiring { float: left; width: 70%; margin-top: 40px; }
+.hiring { background: url("../images/hiringbg.png") no-repeat scroll 0 0 / 100% auto rgba(0, 0, 0, 0); padding: 20px 7% 20px 20px; margin-bottom: 20px; min-height: 175px;}
 .teamName {display: table;}
 
 /* =Centered Page
