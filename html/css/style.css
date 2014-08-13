@@ -225,7 +225,7 @@ nav ul li a.activeLink, nav ul li a:hover {
 	background: url(../images/blue-stip.png) right top no-repeat;
 }
 .signupBoxWrap {
-	margin:12% 0 12% 10%;
+	margin:5.5% 0 12% 10%;
 }
 .signupBox h1 {
 	margin: 0px 0px 11px 0px;
@@ -269,9 +269,9 @@ nav ul li a.activeLink, nav ul li a:hover {
 }
 .signupBox a.watchvideo {
 	padding: 0px 61px 0px 18px;
-	margin: 15px 0px 0px 11px;
+	margin: 15px 0px 0px 22%;
 	line-height: 44px;
-	float: left;
+	display: inline-block;
 	font-family: 'AVENIRNEXTLTPRO-MEDIUMCN';
 	font-size: 25px;
 	text-transform: uppercase;
@@ -282,10 +282,16 @@ nav ul li a.activeLink, nav ul li a:hover {
 	-webkit-border-radius: 4px;
 	-moz-border-radius: 4px;
 }
+.availStore { margin: 4% 0px 0px 11%}
+.availStore a { display: inline-block; width: 25%; margin-right: 5%;  border: 2px solid #fff; border-radius: 10px; padding: 7px 7px 3px 7px;}
+.availStore a:hover { background-color: #00b1c9;  box-shadow: -5px 10px 20px rgba(0, 0, 0, 0.3); transition: all 0.2s ease 0s;}
+.availStore a:last-child { margin-right: 0px;}
+.availStore a img { max-width: 210px;}
  @-moz-document url-prefix() {
  .sociableBox ul li input[type="submit"] {
  line-height: 18px;
 float: left;
+
 }
  .signupBox input[type="submit"] {
 line-height: 32px;
@@ -686,7 +692,7 @@ footer ul li a {
 		background-size:100% 100%;
 	}
 	.signupBoxWrap .signupContainer, .signupBoxWrap .align {
-		width:50%;
+		width:100%;
 		float:left;
 	}
 	.signupBox input[type="text"],
@@ -929,8 +935,11 @@ footer ul li a {
 	}
 	.signupBox a.watchvideo {
 		font-size: 16px;
-		padding-right: 40px;
+		margin-left:  0px;
 	}
+    .availStore {
+        margin-left: 25%;
+    }
 	footer {
 		padding: 13px 0px 0;
 	}
@@ -995,6 +1004,16 @@ footer ul li a {
 		float: none;
 		margin:0;
 	}
+    .signupBoxWrap .align {
+        width: 100%;
+        text-align: left;
+    }
+    .availStore {
+        margin-left: 0%;
+    }
+    .availStore a {
+        width: 30%;
+    }
 	.signupBox a.watchvideo {
 		font-size: 18px;
 		margin: 8px 0 0;

@@ -59,13 +59,6 @@
           <li><a href="http://clickinkeepscoring.tumblr.com/" target="_blank" title="Blog">Blog</a></li>
           <li><a href="https://twitter.com/ClickinApp" target="_blank" class="facebook" title="Twitter">Twitter</a></li>
           <li class="gap"><a href="https://www.facebook.com/pages/Clickin-Keep-Scoring/627229503987907" target="_blank" class="twitter" title="Facebook">Facebook</a></li>
-          <li id="disableEmail">
-            <form method="POST" action="index.php">  
-              <input type="text" placeholder="Enter email" name="email" />
-              <input type="hidden" name="m" value="1" />
-              <input class="submit" type="submit" value="sign up" />
-            </form>	
-          </li>
         </ul>
       </div>
     </div>
@@ -75,7 +68,6 @@
 
       <div class="mobileFrame"> 
         <div class="widthWrapper">
-        
           <section class="signupBox">
           	<div class="signupBoxWrap">
               <h1>Clickin</h1>
@@ -83,15 +75,20 @@
                 WAY TO EXPRESS YOURSELF</p>
                 <form method="POST" action=""> 
                   <div class="signupContainer">
-                    <fieldset id="abs">
+                    <!--fieldset id="abs">
                       <input type="text" placeholder="Enter email" name="email"/>
                       <input type="hidden" name="m" value="1" />
                       <input class="submit" type="submit" value="sign up" />
-                    </fieldset>
+                    </fieldset-->
                   </div>
                   <span class="align"><a href="#" class="watchvideo" title="watch Video">Watch Video</a></span>
                 </form>
+
               <div class="clear"></div>
+              <div class="availStore">
+                               <a href="#"><img src="images/appStore.png" alt="apple store"></a>
+                               <a href="#"><img src="images/googleStoreComing.png" alt="google store"></a>
+                              </div>
             </div><!-- .signupBoxWrap -->
           </section><!-- .signupBox -->
 
