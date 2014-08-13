@@ -150,15 +150,7 @@
         <div class="widthWrapper">
           <img src="images/your-score.png" alt="Your Score"/>
           <p>Be it a loyal lover, a casual fling or someone you just met Clickin' is for those who share a connection or want to.</p>
-          <div class="yourScoreContainer">
-            <form method="POST" action="">  
-              <fieldset class="abs">
-                <input type="text" placeholder="Enter email" name="email" class="email" />
-                <input type="hidden" name="m" value="1" />
-                <input class="submit" type="submit" value="sign up" />
-              </fieldset>
-            </form>
-          </div><!-- yourScoreContainer - Form -->
+
         </div><!-- .widthWrapper -->
     </div><!-- .yourScore -->      
   </article>
