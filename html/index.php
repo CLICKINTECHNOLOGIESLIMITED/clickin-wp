@@ -86,7 +86,7 @@
 
               <div class="clear"></div>
               <div class="availStore">
-                               <a href="#"><img src="images/appStore.png" alt="apple store"></a>
+                               <a href="https://itunes.apple.com/us/app/clickin-keep-scoring/id901882470" target="_blank"><img src="images/appStore.png" alt="apple store"></a>
                                <a href="#"><img src="images/googleStoreComing.png" alt="google store"></a>
                               </div>
             </div><!-- .signupBoxWrap -->
