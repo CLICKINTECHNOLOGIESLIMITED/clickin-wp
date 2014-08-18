@@ -73,8 +73,8 @@
           <section class="signupBox">
           	<div class="signupBoxWrap">
               <h1>Clickin</h1>
-              <p>IS  SIMPLEST AND FASTEST <br>
-                WAY TO EXPRESS YOURSELF</p>
+              <p>TURN ANY RELATIONSHIP INTO<br>
+                A GAME OF NUMBERS</p>
                 <form method="POST" action=""> 
                   <div class="signupContainer">
                     <!--fieldset id="abs">
